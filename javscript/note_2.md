@@ -1,401 +1,391 @@
-
-### Convert String to Number
-
-
 ```javascript
-A = 10;
-B = "10";
 
-A === Number ( b ) ;
-
-Conver Number to String
-
-A= "10";
-A = String ( a );
-
-// While hanya berjalan jika kondisi True
-
-var i = 0;
-
-    while ( true ) {
-        if ((i <= 9) === false ){
-            break;
-        }
-
-        console.log( 1 );
-        i = i + 1;
-
-        Let numOfCustomers = 10;
-        while (numOfCustomers > 0) {
-            console.log( "How may I help you?" );
-            // help the customer...
-            numOfCustomers = numOfCustomers - 1;
-        }
-
-        // Do while tetap berjalan sekali bila kondisi false console.log("adaygbisadibantu")
-        x = x -1;
-
-    } while ( x > 0);
+// LOGGING OUTPUT
+alert('Hello World'); // Do not use for debugging. Stops script and only strings
+console.log('Hello World');
+console.error('This is an error');
+console.warn('This is a warning');
 
 
-variabel.toFixed(2) // mengambil 2 digit angka desimal di belakang koma
+// VARIABLES // var, let, const
+let age = 30;
 
-function abc(amt) { console.log( amt.toFixed( 2) ); } 
-function bca() { return String(amount); } 
-var amount = 99.99;
+// let can be re-assigned, const can not
+age = 31;
 
-const SPENDING_THRESHOLD = 200;
-const TAX_RATE           = 0.08;
-const PHONE_PRICE        = 99.99;
-const ACCESSORY_PRICE    = 9.99;
 
-var bank_balance = 303.91;
-var amount       = 0;
+// DATA TYPES 
+// String, Number, Boolean, null, undefined
+const name   = 'Brad';
+const age    = 37;
+const rating = 3.5;
+const isCool = true;
+const x      = null;
+const y      = undefined;
+let z; // undefined
 
-function calculateTax(amount) {
-	return amount * TAX_RATE;
+// Check type
+console.log(typeof z);
+
+
+// STRINGS
+
+// Concatenation
+console.log('My name is ' + name + ' and I am ' + age);
+// Template literal (better)
+console.log(`My name is ${name} and I am ${age}`);
+
+// String methods & properties
+const s = 'Hello World';
+let val;
+// Get length
+val = s.length;
+// Change case
+val = s.toUpperCase();
+val = s.toLowerCase();
+// Get sub string
+val = s.substring(0, 5);
+// Split into array
+val = s.split('');
+
+
+
+// ARRAYS 
+// Store multiple values in a variable
+const numbers = [1,2,3,4,5];
+const fruits = ['apples', 'oranges', 'pears', 'grapes'];
+console.log(numbers, fruit);
+
+// Get one value 
+// Arrays start at 0
+console.log(fruits[1]);
+
+// Add value
+fruits[4] = 'blueberries';
+
+// Add value using push()
+fruits.push('strawberries');
+
+// Add to beginning
+fruits.unshift('mangos');
+
+// Remove last value
+fruits.pop();
+
+// Check if array
+console.log(Array.isArray(fruits));
+
+// Get index
+console.log(fruits.indexOf('oranges'));
+
+
+
+// OBJECT LITERALS
+const person = {
+  firstName: 'John',
+  age: 30,
+  hobbies: ['music', 'movies', 'sports'],
+  address: {
+	street: '50 Main st',
+	city: 'Boston',
+	state: 'MA'
+  }
 }
 
-function formatAmount(amount) {
-	return "$" + amount.toFixed( 2 );
-}
+// Get single value
+console.log(person.name)
 
+// Get array value
+console.log(person.hobbies[1]);
 
-// keep buying phones while you still have money
-while (amount < bank_balance) {
-	 buy a new phone!
-	amount = amount + PHONE_PRICE;
+// Get embedded object
+console.log(person.address.city);
 
-	 // can we afford the accessory?
-	if (amount < SPENDING_THRESHOLD) {
-		amount = amount + ACCESSORY_PRICE;
-	}
-}
+// Add property
+person.email = 'jdoe@gmail.com';
 
-
- // don't forget to pay the government, too
-amount = amount + calculateTax( amount );
-
-console.log( "Your purchase: " + formatAmount( amount ));
- // Your purchase: $334.76
-
-
- // can you actually afford this purchase?
-if (amount > bank_balance) {
-	console.log( "You can't afford this purchase. :(");
-}
- // You can't afford this purchase. :(
-
-
-var a;
-typeof a;				 "undefined"
-
-a = "hello world";
-typeof a;				 "string"
-
-a = 42;
-typeof a;				 "number"
-
-a = true;
-typeof a;				 "boolean"
-
-a = null;
-typeof a;				 "object" // -- weird, bug
-
-a = undefined;
-typeof a;				 "undefined"
-
-a = { b: "c" };
-typeof a;				 "object"
-
-
-var obj = {
-	a: "hello world",
-	b: 42,
-	c: true
-};
-
-obj.a;		 "hello world"
-obj.b;		 42
-obj.c;		 true
-
-obj["a"];	 "hello world"
-obj["b"];	 42
-obj["c"];	 true
-
-
-var arr = [
-	"hello world",
-	42,
-	true
-];
-
-arr[0];			 "hello world"
-arr[1];			 42
-arr[2];			 true
-arr.length;		 3
-
-typeof arr;		 "object"
-
-function foo() {
-	return 42;
-}
-
-foo.bar = "hello world";
-
-typeof foo;			 "function"
-typeof foo();		 "number"
-typeof foo.bar;		 "string"
-
-var a = "hello world";
-var b = 3.14159;
-
-a.length;				 11
-a.toUpperCase();		 "HELLO WORLD"
-b.toFixed(4);			 "3.1416"
-
-var a = 2;
-
-foo();					 // works because `foo()`
-						 // declaration is "hoisted"
-
-
-function foo() {
-	a = 3;
-	console.log( a );	// 3
-	var a;				// declaration is "hoisted"
-						// to the top of `foo()`
-}
-
-
-console.log( a );	 // 2
-
-function foo() {
-	var a = 1;
-
-	function bar() {
-		var b = 2;
-
-		function baz() {
-			var c = 3;
-			console.log( a, b, c );	 // 1 2 3
-		}
-
-		baz();
-		console.log( a, b );		 // 1 2
-	}
-
-
-	bar();
-	console.log( a );				 // 1
-}
-
-foo();
-
-function makeAdder(x) {
-     // parameter `x` is an inner variable
-
-     // inner function `add()` uses `x`, so
-     // it has a "closure" over it
-    function add(y) {
-   	 return y + x;
-    };
-
-    return add;
-}
-//  `plusOne` gets a reference to the inner `add(..)`
-//  function with closure over the `x` parameter of
-//  the outer `makeAdder(..)`
-var plusOne = makeAdder( 1 );
-
-//  `plusTen` gets a reference to the inner `add(..)`
-//  function with closure over the `x` parameter of
-//  the outer `makeAdder(..)`
-var plusTen = makeAdder( 10 );
-
-plusOne( 3 );   	 // 4  <-- 1 + 3
-plusOne( 41 );   	 // 42 <-- 1 + 41
-
-plusTen( 13 );   	 // 23 <-- 10 + 13
-
-function User(){
-    var username, password;
-
-    function doLogin(user,pw) {
-   	 username = user;
-   	 password = pw;
-
-   	  // do the rest of the login work
-    }
-
-    var publicAPI = {
-   	 login: doLogin
-    };
-
-    return publicAPI;
-}
-
- // create a `User` module instance
-var fred = User();
-
-fred.login( "fred", "12Battery34!" );
-
-
-
-// Default Parameter
-
-function foo(a = 2) {
-    console.log( a );
-}
-
-foo();   	  //  2
-foo( 42 );    // 42
-
-
-Logika
-if (a == 2) {
-     do // something
-}
-else if (a == 10) {
-     do // another thing
-}
-else if (a == 42) {
-     do // yet another thing
-}
-else {
-     // fallback to here
-}
-
-
-var a = 42;
-
-var b = (a > 41) ? "hello" : "world";
-
- // similar to:
-
- if (a > 41) {
-    b = "hello";
- }
- else {
-    b = "world";
- }
-
-
-switch (a) {
-    case 2:
-   	  do // something
-   	 break;
-    case 10:
-   	  do // another thing
-   	 break;
-    case 42:
-   	  do // yet another thing
-   	 break;
-    default:
-   	  // fallback to here
-}
-
-```
-
-
-## REDUCE
-adalah mengembalikan jumlah semua elemen dalam array
-
-```javascript
-array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
-
-const arr = [10, 20, 30 , 40];
-const reduced = arr.reduce(function(previousValue, currentValue) {
-  console.log(`${previousValue} + ${currentValue} = ${previousValue + currentValue}`);
-return previousValue + currentValue;
-
-},0)
-
-console.log(reduced);
-```
-
-
-
-## MAP
-
-metode membuat Array baru yang diisi dengan hasil pemanggilan fungsi yang disediakan pada setiap elemen dalam array pemanggil
-
-```javascript
-map((element, index, array) => { /* … */ })
-
-const users = ['Huda', 'Budi', 'Anton', 'Tomi'];
-const mapped = users.map(function(element, index, array) {
-  return element.toUpperCase();
-})
-console.log(users, mapped);
-
-multi-dimensional array = Array yg berisi Object
-const users = ['Huda', 'Budi', 'Anton', 'Tomi'];
-const mapped = users.map(function(element, index, array) {
-  return element.toUpperCase();
-})
-
-console.log(users, mapped);
-
-const users = [
+// Array of objects
+const todos = [
   {
-	name: 'Budi',
-	username: 'budiusername',
-	favoriteColor: 'red'
+	id: 1,
+	text: 'Take out trash',
+	isComplete: false
   },
   {
-	name: 'Anton',
-	username: 'antongaming',
-	favoriteColor: 'blue'
+	id: 2,
+	text: 'Dinner with wife',
+	isComplete: false
+  },
+  {
+	id: 3,
+	text: 'Meeting with boss',
+	isComplete: true
   }
 ];
 
-const usersWithoutFc = users.map(function(user) {
-  return {
-	name: user.name,
-	username: user.username
+// Get specific object value
+console.log(todos[1].text);
+
+// Format as JSON
+console.log(JSON.stringify(todos));
+
+
+// LOOPS
+
+// For
+for(let i = 0; i <= 10; i++){
+  console.log(`For Loop Number: ${i}`);
+}
+
+// While
+let i = 0
+while(i <= 10) {
+  console.log(`While Loop Number: ${i}`);
+  i++;
+}
+
+// Loop Through Arrays
+// For Loop
+for(let i = 0; i < todos.length; i++){
+  console.log(` Todo ${i + 1}: ${todos[i].text}`);
+}
+
+// For...of Loop
+for(let todo of todos) {
+  console.log(todo.text);
+}
+
+
+// HIGH ORDER ARRAY METHODS (show prototype)
+
+// forEach() 
+// Loops through array
+todos.forEach(function(todo, i, myTodos) {
+  console.log(`${i + 1}: ${todo.text}`);
+  console.log(myTodos);
+});
+
+// map() 
+// Loop through and create new array
+const todoTextArray = todos.map(function(todo) {
+  return todo.text;
+});
+
+console.log(todoTextArray);
+
+// filter() 
+// Returns array based on condition
+const todo1 = todos.filter(function(todo) {
+  // Return only todos where id is 1
+  return todo.id === 1;
+});
+
+
+// CONDITIONALS
+
+// Simple If/Else Statement
+const x = 30;
+
+if(x === 10) {
+  console.log('x is 10');
+} else if(x > 10) {
+  console.log('x is greater than 10');
+} else {
+  console.log('x is less than 10')
+}
+
+// Switch
+color = 'blue';
+
+switch(color) {
+  case 'red':
+	console.log('color is red');
+  case 'blue':
+	console.log('color is blue');
+  default:  
+	console.log('color is not red or blue')
+}
+
+// Ternary operator / Shorthand if
+const z = color === 'red' ? 10 : 20;
+
+
+
+// FUNCTIONS
+function greet(greeting = 'Hello', name) {
+  if(!name) {
+	// console.log(greeting);
+	return greeting;
+  } else {
+	// console.log(`${greeting} ${name}`);
+	return `${greeting} ${name}`;
   }
-});
+}
 
-console.log(usersWithoutFc);
-```
 
-Memfilter key value yg ada di dalam Object
+// ARROW FUNCTIONS
+const greet = (greeting = 'Hello', name = 'There') => `${greeting} ${name}`;
+console.log(greet('Hi'));
 
-## FILTER
-metode membuat salinan dangkal dari sebagian array tertentu, difilter hingga hanya elemen dari larik tertentu yang lulus uji yang diterapkan oleh fungsi yang disediakan.
 
-```javascript
-const fruits = ['Apple', 'Orange', 'Mango', 'Duku', 'Semangka'];
-const filterFruits = fruits.filter(function(fruit) {
-  console.log(fruit[0]);
-  return fruit == 'Apple' ? false : true;
-});
-console.log(filterFruits);
+// OOP
 
-const siswa = [
-  {
-	nama: 'Budi',
-	kelas: 12
-  },
-  {
-	nama: 'Huda',
-	kelas: 12
-  },
-  {
-	nama: 'Rizal',
-	kelas: 10
-  },
-  {
-	nama: 'Shawo',
-	kelas: 10
+// Constructor Function
+function Person(firstName, lastName, dob) {
+  // Set object properties
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = new Date(dob); // Set to actual date object using Date constructor
+  // this.getBirthYear = function(){
+  //   return this.dob.getFullYear();
+  // }
+  // this.getFullName = function() {
+  //   return `${this.firstName} ${this.lastName}`
+  // }
+}
+
+// Get Birth Year
+Person.prototype.getBirthYear = function () {
+  return this.dob.getFullYear();
+}
+
+// Get Full Name
+Person.prototype.getFullName = function() {
+  return `${this.firstName} ${this.lastName}`
+}
+
+
+// Instantiate an object from the class
+const person1 = new Person('John', 'Doe', '7-8-80');
+const person2 = new Person('Steve', 'Smith', '8-2-90');
+
+console.log(person2);
+
+// console.log(person1.getBirthYear());
+// console.log(person1.getFullName());
+
+
+
+// Built in constructors
+const name = new String('Kevin');
+console.log(typeof name); // Shows 'Object'
+const num = new Number(5);
+console.log(typeof num); // Shows 'Object'
+
+
+// ES6 CLASSES
+class Person {
+  constructor(firstName, lastName, dob) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.dob = new Date(dob);
   }
-];
 
-const filterSiswa = siswa.filter(function(item) {
-  return item.kelas == '10' ? true : false;
+  // Get Birth Year
+  getBirthYear() {
+	return this.dob.getFullYear();
+  }
 
+  // Get Full Name
+  getFullName() {
+	return `${this.firstName} ${this.lastName}`
+  }
+}
+
+const person1 = new Person('John', 'Doe', '7-8-80');
+console.log(person1.getBirthYear());
+
+
+// ELEMENT SELECTORS
+
+// Single Element Selectors
+console.log(document.getElementById('my-form'));
+console.log(document.querySelector('.container'));
+
+// Multiple Element Selectors
+console.log(document.querySelectorAll('.item'));
+console.log(document.getElementsByTagName('li'));
+console.log(document.getElementsByClassName('item'));
+
+const items = document.querySelectorAll('.item');
+items.forEach((item) => console.log(item));
+
+
+// MANIPULATING THE DOM
+const ul = document.querySelector('.items');
+// ul.remove();
+// ul.lastElementChild.remove();
+ul.firstElementChild.textContent = 'Hello';
+ul.children[1].innerText = 'Brad';
+ul.lastElementChild.innerHTML = '<h1>Hello</h1>';
+
+const btn = document.querySelector('.btn');
+// btn.style.background = 'red';
+
+
+// EVENTS
+
+// Mouse Event
+btn.addEventListener('click', e => {
+  e.preventDefault();
+  console.log(e.target.className);
+  document.getElementById('my-form').style.background = '#ccc';
+  document.querySelector('body').classList.add('bg-dark');
+  ul.lastElementChild.innerHTML = '<h1>Changed</h1>';
 });
 
-console.log(filterSiswa);
+// Keyboard Event
+const nameInput = document.querySelector('#name');
+nameInput.addEventListener('input', e => {
+  document.querySelector('.container').append(nameInput.value);
+});
+
+
+// USER FORM SCRIPT
+
+// Put DOM elements into variables
+const myForm     = document.querySelector('#my-form');
+const nameInput  = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg        = document.querySelector('.msg');
+const userList   = document.querySelector('#users');
+
+// Listen for form submit
+myForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {
+  e.preventDefault();
+ 
+  if(nameInput.value === '' || emailInput.value === '') {
+	// alert('Please enter all fields');
+	msg.classList.add('error');
+	msg.innerHTML = 'Please enter all fields';
+
+	// Remove error after 3 seconds
+	setTimeout(() => msg.remove(), 3000);
+  } else {
+	// Create new list item with user
+	const li = document.createElement('li');
+
+	// Add text node with input values
+	li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+
+	// Add HTML
+	// li.innerHTML = `<strong>${nameInput.value}</strong>e: ${emailInput.value}`;
+
+	// Append to ul
+	userList.appendChild(li);
+
+	// Clear fields
+	nameInput.value = '';
+	emailInput.value = '';
+  }
+}
+
+
+let body = document.querySelector('body'); 
+let div = document.createElement('div'); 
+div.innerText ="tomol diklik"; 
+body.appendChild(div);
+
 ```
