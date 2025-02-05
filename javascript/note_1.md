@@ -1,6 +1,4 @@
-
 ### Convert String to Number
-
 
 ```javascript
 A = 10;
@@ -40,8 +38,8 @@ var i = 0;
 
 variabel.toFixed(2) // mengambil 2 digit angka desimal di belakang koma
 
-function abc(amt) { console.log( amt.toFixed( 2) ); } 
-function bca() { return String(amount); } 
+function abc(amt) { console.log( amt.toFixed( 2) ); }
+function bca() { return String(amount); }
 var amount = 99.99;
 
 const SPENDING_THRESHOLD = 200;
@@ -297,8 +295,8 @@ switch (a) {
 
 ```
 
-
 ## REDUCE
+
 adalah mengembalikan jumlah semua elemen dalam array
 
 ```javascript
@@ -313,8 +311,6 @@ return previousValue + currentValue;
 
 console.log(reduced);
 ```
-
-
 
 ## MAP
 
@@ -363,38 +359,38 @@ console.log(usersWithoutFc);
 Memfilter key value yg ada di dalam Object
 
 ## FILTER
+
 metode membuat salinan dangkal dari sebagian array tertentu, difilter hingga hanya elemen dari larik tertentu yang lulus uji yang diterapkan oleh fungsi yang disediakan.
 
 ```javascript
-const fruits = ['Apple', 'Orange', 'Mango', 'Duku', 'Semangka'];
-const filterFruits = fruits.filter(function(fruit) {
-  console.log(fruit[0]);
-  return fruit == 'Apple' ? false : true;
+const fruits = ["Apple", "Orange", "Mango", "Duku", "Semangka"];
+const filterFruits = fruits.filter(function (fruit) {
+	console.log(fruit[0]);
+	return fruit == "Apple" ? false : true;
 });
 console.log(filterFruits);
 
 const siswa = [
-  {
-	nama: 'Budi',
-	kelas: 12
-  },
-  {
-	nama: 'Huda',
-	kelas: 12
-  },
-  {
-	nama: 'Rizal',
-	kelas: 10
-  },
-  {
-	nama: 'Shawo',
-	kelas: 10
-  }
+	{
+		nama: "Budi",
+		kelas: 12,
+	},
+	{
+		nama: "Huda",
+		kelas: 12,
+	},
+	{
+		nama: "Rizal",
+		kelas: 10,
+	},
+	{
+		nama: "Shawo",
+		kelas: 10,
+	},
 ];
 
-const filterSiswa = siswa.filter(function(item) {
-  return item.kelas == '10' ? true : false;
-
+const filterSiswa = siswa.filter(function (item) {
+	return item.kelas == "10" ? true : false;
 });
 
 console.log(filterSiswa);
