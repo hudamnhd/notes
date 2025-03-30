@@ -1,0 +1,290 @@
+---
+import "../styles/global.css";
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/lora/400.css";
+import "@fontsource/lora/600.css";
+import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2";
+import inter600 from "@fontsource/inter/files/inter-latin-600-normal.woff2";
+import lora400 from "@fontsource/lora/files/lora-latin-400-normal.woff2";
+import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, description, image = "/nano.png" } = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/x-icon" href="/favicon-light.svg">
+<meta name="generator" content={Astro.generator} />
+
+<!-- Font preloads -->
+<link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href={lora400} as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href={lora600} as="font" type="font/woff2" crossorigin/>
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<ViewTransitions  />
+
+<script>
+  import type { TransitionBeforeSwapEvent } from "astro:transitions/client";
+  document.addEventListener("astro:before-swap", (e) =>
+    [
+      ...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll(
+        "link[as=\"font\"]"
+      ),
+    ].forEach((link) => link.remove())
+  );
+</script>
+
+<script is:inline>
+  function init() {
+    preloadTheme();
+    onScroll();
+    animate();
+
+    const backToTop = document.getElementById("back-to-top");
+    backToTop?.addEventListener("click", (event) => scrollToTop(event));
+
+    const backToPrev = document.getElementById("back-to-prev");
+    backToPrev?.addEventListener("click", () => window.history.back());
+
+    const themeButton = document.getElementById("theme-button");
+
+    function setTheme(theme) {
+      localStorage.setItem("theme", theme);
+
+      switch (theme) {
+        case "system":
+            toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+          break;
+        case "light":
+            toggleTheme(false);
+          break;
+        case "dark":
+            toggleTheme(true);
+          break;
+      }
+
+      updateButtonText(theme);
+    }
+
+    // Fungsi untuk memperbarui teks tombol sesuai tema aktif
+    function updateButtonText(theme) {
+      switch (theme) {
+        case "system":
+          themeButton.setAttribute("aria-label", "System theme");
+          themeButton.setAttribute("title", "System theme");
+          themeButton.innerHTML = `<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
+          >
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>`;
+          break;
+        case "light":
+          themeButton.setAttribute("aria-label", "light theme");
+          themeButton.setAttribute("title", "light theme");
+          themeButton.innerHTML = `<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>`;
+          break;
+        case "dark":
+          themeButton.setAttribute("aria-label", "Dark theme");
+          themeButton.setAttribute("title", "Dark theme");
+          themeButton.innerHTML = `<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>`;
+          break;
+      }
+    }
+
+    // Menambahkan event listener untuk mengganti tema saat tombol diklik
+    themeButton?.addEventListener("click", () => {
+      let nextTheme;
+      switch (localStorage.getItem("theme")) {
+        case "system":
+          nextTheme = "light";
+          break;
+        case "light":
+          nextTheme = "dark";
+          break;
+        case "dark":
+          nextTheme = "system";
+          break;
+      }
+      setTheme(nextTheme);
+    });
+
+
+    const lightThemeButton = document.getElementById("light-theme-button");
+    lightThemeButton?.addEventListener("click", () => {
+      localStorage.setItem("theme", "light");
+      toggleTheme(false);
+    });
+
+    const darkThemeButton = document.getElementById("dark-theme-button");
+    darkThemeButton?.addEventListener("click", () => {
+      localStorage.setItem("theme", "dark");
+      toggleTheme(true);
+    });
+
+    const systemThemeButton = document.getElementById("system-theme-button");
+    systemThemeButton?.addEventListener("click", () => {
+      localStorage.setItem("theme", "system");
+      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    });
+
+    window.matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", event => {
+        if (localStorage.theme === "system") {
+          toggleTheme(event.matches);
+        }
+      }
+    );
+
+    document.addEventListener("scroll", onScroll);
+    updateButtonText(localStorage.getItem("theme") || "system")
+  }
+
+  function animate() {
+    const animateElements = document.querySelectorAll(".animate");
+
+    animateElements.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.add("show");
+      }, index * 150);
+    });
+  }
+
+  function onScroll() {
+    if (window.scrollY > 0) {
+      document.documentElement.classList.add("scrolled");
+    } else {
+      document.documentElement.classList.remove("scrolled");
+    }
+  }
+
+  function scrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+function toggleTheme(dark) {
+    const css = document.createElement("style");
+
+    css.appendChild(
+      document.createTextNode(
+        `* {
+             -webkit-transition: none !important;
+             -moz-transition: none !important;
+             -o-transition: none !important;
+             -ms-transition: none !important;
+             transition: none !important;
+          }
+        `,
+      )
+    );
+
+    document.head.appendChild(css);
+
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+  window.getComputedStyle(css).opacity;
+    document.head.removeChild(css);
+  }
+
+  function preloadTheme() {
+    const userTheme = localStorage.theme;
+
+    if (userTheme === "light" || userTheme === "dark") {
+      toggleTheme(userTheme === "dark");
+    } else {
+      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => init());
+  document.addEventListener("astro:after-swap", () => init());
+  preloadTheme();
+</script>
