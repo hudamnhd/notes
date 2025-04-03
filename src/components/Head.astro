@@ -169,7 +169,7 @@ const { title, description, image = "/nano.png" } = Astro.props;
     // Menambahkan event listener untuk mengganti tema saat tombol diklik
     themeButton?.addEventListener("click", () => {
       let nextTheme;
-      switch (localStorage.getItem("theme")) {
+      switch (localStorage.getItem("theme") || "system") {
         case "system":
           nextTheme = "light";
           break;
