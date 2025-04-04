@@ -29,6 +29,7 @@
       --chart-4: 220 14.3% 98.9%;
       --chart-5: 220.9 42.3% 11%;
       --radius: 0.5rem;
+      color-scheme: light dark sephia;
     }
 
     .dark {
@@ -57,6 +58,34 @@
       --chart-4: 215 27.9% 19.9%;
       --chart-5: 210 23% 98%;
     }
+
+    .sephia {
+      --background: 39.4 69.6% 91%;
+      --foreground: 222.2 84.00% 4.90%;
+      --card: 39.4 69.6% 91%;
+      --card-foreground: 222.2 84.00% 4.90%;
+      --primary: 38.8 28.8% 34.7%;
+      --primary-foreground: 210 40% 98%;
+      --secondary: 38.6 67.8% 82.9%;
+      --secondary-foreground: 222.2 47.4% 11.20%;
+      --muted: 38.6 67.8% 82.9%;
+      --muted-foreground: 0, 0%, 40%;
+      --accent: 38.6 67.8% 82.9%;
+      --accent-foreground: 38.2 73.3% 2.9%;
+      --popover: 39.4 69.6% 91%;
+      --popover-foreground: 222.2 84.00% 4.90%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 38, 36%, 78%;
+      --input: 38, 36%, 78%;
+      --ring: 38.2 73.3% 2.9%;
+      --chart-1: 24.6 95% 53.1%;
+      --chart-2: 173.4 80.4% 40%;
+      --chart-3: 198.6 88.7% 48.4%;
+      --chart-4: 258.3 89.5% 66.3%;
+      --chart-5: 330.4 81.2% 60.4%;
+    }
+
   }
 
 
@@ -73,25 +102,24 @@ html.dark {
   color-scheme: dark;
 }
 
-html,
-body {
-  @apply size-full;
+html.sephia {
+  color-scheme: sephia;
 }
 
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  @apply flex flex-col;
+  @apply flex flex-col min-h-svh;
   @apply bg-background text-foreground;
 }
 
 header {
   @apply sticky top-0 left-0 right-0 z-50 py-4;
-  @apply backdrop-blur-sm saturate-200;
+  @apply bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60;
 }
 
 main {
-  @apply flex-1 py-2;
+  @apply flex-1 pt-10 pb-5;
 }
 
 footer {
@@ -99,19 +127,18 @@ footer {
 }
 
 article {
-  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto prose-li:my-0.5;
+  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto prose-p:my-0.5;
   @apply prose-headings:font-semibold prose-p:font-sans;
-  @apply prose-headings:text-black prose-headings:dark:text-white;
+  @apply prose-headings:text-foreground;
 }
 
 @layer utilities {
   article a {
-    @apply font-sans text-current underline underline-offset-2;
-    @apply decoration-black/15 dark:decoration-white/30;
+    @apply font-sans text-foreground underline underline-offset-2;
+    @apply decoration-border;
     @apply transition-colors duration-300 ease-in-out;
   }
   article a:hover {
-    @apply text-black dark:text-white;
     @apply decoration-black/25 dark:decoration-white/50;
   }
 }
@@ -131,4 +158,8 @@ html #back-to-top {
 
 html.scrolled #back-to-top {
   @apply opacity-100 pointer-events-auto;
+}
+
+mark {
+  @apply bg-lime-400 text-black px-1.5 py-0.5 rounded-md
 }

@@ -11,9 +11,12 @@ import BackToTop from "@components/BackToTop.astro";
         <BackToTop />
       </div>
     </div>
-    <div class="flex justify-center items-center">
+    <div class="flex sm:flex-row flex-col gap-1 justify-between items-center text-muted-foreground">
       <div>
-        &copy; 2025 {`|`} {SITE.NAME}
+         {SITE.NAME} &copy; 2025
+      </div>
+      <div>
+        <a href="https://github.com/markhorn-dev/astro-nano" target="_blank" class="hover:text-foreground">Powered by Astro Nano</a>
       </div>
     </div>
   </Container>

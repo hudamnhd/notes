@@ -10,7 +10,7 @@ date: "Mar 1 2025"
 
 Reference: [Theme switching based on this tweet from Devon Govett](https://twitter.com/devongovett/status/1757131288144663027)
 
-***styles.css***
+**styles.css**
 ```css
 /*
   Theme variables
@@ -153,7 +153,7 @@ Reference: [Theme switching based on this tweet from Devon Govett](https://twitt
 }
 ```
 
-***extended-theme.ts***
+**extended-theme.ts**
 ```ts
 import { type Config } from "tailwindcss";
 
@@ -265,7 +265,7 @@ export const extendedTheme = {
 } satisfies Config["theme"];
 ```
 
-***tailwind.config.ts***
+**tailwind.config.ts**
 ```ts
 /** @type {import('tailwindcss').Config} */
 import { extendedTheme } from "./src/utils/extended-theme";
@@ -277,4 +277,5 @@ export default {
 		extend: extendedTheme,
 	},
 };
+
 ```
