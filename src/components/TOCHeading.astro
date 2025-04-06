@@ -1,0 +1,27 @@
+---
+import type { TocItem } from "@lib/generateToc";
+
+interface Props {
+	heading: TocItem;
+}
+
+const {
+	heading: { children, depth, slug, text },
+} = Astro.props;
+---
+
+<li class={`${depth > 2 ? "ms-2" : ""}`}>
+	<a
+		class={`line-clamp-2 ${depth <= 2 ? "" : ""}`}
+		href={`#${slug}`}><span aria-hidden="true" class="me-0.5">{text}</a
+	>
+	{
+		!!children.length && (
+		<ul class="not-prose my-2 ms-2.5 list-disc [&>li]:mt-0.5">
+				{children.map((subheading) => (
+					<Astro.self heading={subheading} />
+				))}
+			</ul>
+		)
+	}
+</li>

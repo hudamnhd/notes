@@ -8,10 +8,6 @@
       --foreground: 224 71.4% 4.1%;
       --muted: 220 14.3% 95.9%;
       --muted-foreground: 220 8.9% 46.1%;
-      --popover: 0 0% 100%;
-      --popover-foreground: 224 71.4% 4.1%;
-      --card: 0 0% 100%;
-      --card-foreground: 224 71.4% 4.1%;
       --border: 220 13% 91%;
       --input: 220 13% 91%;
       --primary: 220.9 39.3% 11%;
@@ -23,11 +19,6 @@
       --destructive: 0 84.2% 60.2%;
       --destructive-foreground: 210 20% 98%;
       --ring: 224 71.4% 4.1%;
-      --chart-1: 220.9 39.3% 11%;
-      --chart-2: 220 14.3% 95.9%;
-      --chart-3: 220 14.3% 95.9%;
-      --chart-4: 220 14.3% 98.9%;
-      --chart-5: 220.9 42.3% 11%;
       --radius: 0.5rem;
       color-scheme: light dark sephia;
     }
@@ -37,10 +28,6 @@
       --foreground: 210 20% 98%;
       --muted: 215 27.9% 16.9%;
       --muted-foreground: 217.9 10.6% 64.9%;
-      --popover: 224 71.4% 4.1%;
-      --popover-foreground: 210 20% 98%;
-      --card: 224 71.4% 4.1%;
-      --card-foreground: 210 20% 98%;
       --border: 215 27.9% 16.9%;
       --input: 215 27.9% 16.9%;
       --primary: 210 20% 98%;
@@ -52,18 +39,11 @@
       --destructive: 0 62.8% 30.6%;
       --destructive-foreground: 210 20% 98%;
       --ring: 216 12.2% 83.9%;
-      --chart-1: 210 20% 98%;
-      --chart-2: 215 27.9% 16.9%;
-      --chart-3: 215 27.9% 16.9%;
-      --chart-4: 215 27.9% 19.9%;
-      --chart-5: 210 23% 98%;
     }
 
     .sephia {
       --background: 39.4 69.6% 91%;
       --foreground: 222.2 84.00% 4.90%;
-      --card: 39.4 69.6% 91%;
-      --card-foreground: 222.2 84.00% 4.90%;
       --primary: 38.8 28.8% 34.7%;
       --primary-foreground: 210 40% 98%;
       --secondary: 38.6 67.8% 82.9%;
@@ -72,18 +52,11 @@
       --muted-foreground: 0, 0%, 40%;
       --accent: 38.6 67.8% 82.9%;
       --accent-foreground: 38.2 73.3% 2.9%;
-      --popover: 39.4 69.6% 91%;
-      --popover-foreground: 222.2 84.00% 4.90%;
       --destructive: 0 84.2% 60.2%;
       --destructive-foreground: 210 40% 98%;
       --border: 38, 36%, 78%;
       --input: 38, 36%, 78%;
       --ring: 38.2 73.3% 2.9%;
-      --chart-1: 24.6 95% 53.1%;
-      --chart-2: 173.4 80.4% 40%;
-      --chart-3: 198.6 88.7% 48.4%;
-      --chart-4: 258.3 89.5% 66.3%;
-      --chart-5: 330.4 81.2% 60.4%;
     }
 
   }
@@ -127,19 +100,15 @@ footer {
 }
 
 article {
-  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto prose-p:my-0.5;
-  @apply prose-headings:font-semibold prose-p:font-sans;
+  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
+  @apply prose-headings:font-semibold;
   @apply prose-headings:text-foreground;
 }
 
 @layer utilities {
   article a {
-    @apply font-sans text-foreground underline underline-offset-2;
-    @apply decoration-border;
-    @apply transition-colors duration-300 ease-in-out;
-  }
-  article a:hover {
-    @apply decoration-black/25 dark:decoration-white/50;
+    @apply text-foreground underline underline-offset-4;
+    @apply decoration-foreground;
   }
 }
 

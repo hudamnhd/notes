@@ -4,14 +4,15 @@ description: "Example Case Multi Theme with Tailwind Css"
 date: "Mar 1 2025"
 ---
 
-1. Define theme variables `styles.css`
-2. Create file `extended-theme.ts`
-3. import `extended-theme` in `tailwind-config.ts`
+## Reference
 
-Reference: [Theme switching based on this tweet from Devon Govett](https://twitter.com/devongovett/status/1757131288144663027)
+Source: [Theme switching based on this tweet from Devon Govett](https://twitter.com/devongovett/status/1757131288144663027)
 
-**styles.css**
-```css
+> **note**
+> This method work with Tailwind CSS V3
+
+## Define theme variables
+```css title="styles.css"
 /*
   Theme variables
 */
@@ -153,8 +154,8 @@ Reference: [Theme switching based on this tweet from Devon Govett](https://twitt
 }
 ```
 
-**extended-theme.ts**
-```ts
+## Create file `extended-theme.ts`
+```ts title="extended-theme.ts"
 import { type Config } from "tailwindcss";
 
 
@@ -265,8 +266,9 @@ export const extendedTheme = {
 } satisfies Config["theme"];
 ```
 
-**tailwind.config.ts**
-```ts
+
+## Import file extended-theme
+```ts title="tailwind.config.ts"
 /** @type {import('tailwindcss').Config} */
 import { extendedTheme } from "./src/utils/extended-theme";
 

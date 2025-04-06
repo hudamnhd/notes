@@ -1,9 +1,5 @@
 ---
 import "../styles/global.css";
-import "@fontsource/inter/latin-400.css";
-import "@fontsource/inter/latin-600.css";
-import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2";
-import inter600 from "@fontsource/inter/files/inter-latin-600-normal.woff2";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -26,8 +22,7 @@ const { title, description, image = "/nano.png" } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin/>
-<link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="/fonts/inter/inter.css">
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -99,11 +94,6 @@ const { title, description, image = "/nano.png" } = Astro.props;
           themeButton.setAttribute("title", "light theme");
           themeButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>`;
           break;
-        case "sephia":
-          themeButton.setAttribute("aria-label", "sephia theme");
-          themeButton.setAttribute("title", "Sephia theme");
-          themeButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 18" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 13a5 5 0 1 0-10 0M12 1v3M4.22 5.22l1.42 1.42M1 13h2M21 13h2M18.36 6.64l1.42-1.42M23 17H1"></path></svg>`;
-          break;
         case "dark":
           themeButton.setAttribute("aria-label", "Dark theme");
           themeButton.setAttribute("title", "Dark theme");
@@ -120,9 +110,6 @@ const { title, description, image = "/nano.png" } = Astro.props;
           nextTheme = "light";
           break;
         case "light":
-          nextTheme = "sephia";
-          break;
-        case "sephia":
           nextTheme = "dark";
           break;
         case "dark":
@@ -208,7 +195,7 @@ function toggleTheme(theme) {
     document.head.appendChild(css);
 
     const root = document.documentElement;
-      const themes = ["light", "dark", "sephia"];
+      const themes = ["light", "dark"];
 
       // Bersihkan semua kelas tema yang ada
       themes.forEach((t) => root.classList.remove(t));

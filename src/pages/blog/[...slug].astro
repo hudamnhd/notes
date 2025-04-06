@@ -5,6 +5,7 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
+import TOC from "@components/TOC.astro";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog"))
@@ -19,7 +20,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
 ---
 
 <PageLayout title={post.data.title} description={post.data.description}>
@@ -44,6 +45,7 @@ const { Content } = await post.render();
       </div>
     </div>
     <article class="animate">
+      {!!headings.length && <TOC headings={headings} />}
       <Content />
     </article>
   </Container>

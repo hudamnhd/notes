@@ -4,26 +4,6 @@ description: "A list of awesome applications for 🐧 Linux distributions."
 date: "Jan 1 2025"
 ---
 
-🚀 A list of awesome applications for 🐧 Linux distributions.
-
-## Contents
-
-- [OS](#OS)
-- [Audio](#audio)
-- [Backup](#backup)
-- [Browser](#browser)
-- [Chat](#chat)
-- [Cloud Storage](#cloud-storage)
-- [Code Editors](#code-editors)
-- [Databases](#databases)
-- [Fonts](#fonts)
-- [Markdown Editors](#markdown-editors)
-- [Music](#music)
-- [Terminal](#terminal)
-- [Version Control](#version-control)
-- [Video](#video)
-- [Virtualization](#virtualization)
-
 ## Audio
 
 - [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/) - a sound server system for POSIX OSes. 👏
