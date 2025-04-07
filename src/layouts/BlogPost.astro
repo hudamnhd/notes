@@ -15,7 +15,7 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     <div class="space-y-1 my-10">
       <div class="animate flex items-center gap-1.5">
         <div class="font-base text-sm">
-          <FormattedDate date={pubDate} />
+          <FormattedDate date={pubDate} name={`date-${title}`} />
         </div>
         &bull;
         <div class="font-base text-sm">
@@ -43,7 +43,7 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 </Base>
 
 <script>
-  const backToTop = document.getElementById("back-to-top");
+  const backToTop = document.getElementById("back-to-top") as HTMLButtonElement;
   backToTop.addEventListener("click", () => {
       document.documentElement.scrollTo({ behavior: "smooth", top: 0 });
   });
