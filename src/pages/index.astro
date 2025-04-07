@@ -1,76 +1,37 @@
 ---
-import { getCollection } from "astro:content";
-import Container from "@components/Container.astro";
-import PageLayout from "@layouts/PageLayout.astro";
-import ArrowCard from "@components/ArrowCard.astro";
-import Link from "@components/Link.astro";
-import { SITE, HOME, SOCIALS } from "@consts";
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+import Base from '../layouts/Base.astro';
 
-const blog = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
-
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
-<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
-  <Container>
-    <h4 class="animate font-semibold">
-      Assalamu'alaikum Wr.Wb
-    </h4>
-    <div class="space-y-16">
-      <section>
-        <article class="space-y-4">
-          <p class="animate">
-          Web ini adalah kumpulan catatan pribadi saya, terutama berisi rangkuman dan poin-poin penting dari tulisan yang saya baca, video yang saya tonton ataupun audio yang saya dengar. Tujuannya adalah sebagai arsip digital agar saya dapat dengan mudah mengakses dan mengulang pelajaran yang telah saya dapatkan.
-          </p>
-        </article>
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold">
-            Latest posts
-          </h5>
-          <Link href="/blog">
-            See all posts
-          </Link>
-        </div>
-        <ul class="flex flex-col divide-y">
-          {blog.map(post => (
-            <li>
-              <ArrowCard entry={post} />
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section class="animate space-y-4 hidden">
-        <h5 class="font-semibold">
-          Let's Connect
-        </h5>
-        <article>
-          <p>
-            If you want to get in touch with me about something or just to say hi,
-            reach out on social media or send me an email.
-          </p>
-        </article>
-        <ul class="flex flex-wrap gap-2">
-          {SOCIALS.map(SOCIAL => (
-            <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
-              </Link>
-              {"/"}
-            </li>
-          ))}
-          <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
-              {SITE.EMAIL}
-            </Link>
-          </li>
-        </ul>
-      </section>
+<Base>
+  <section class="prose prose-invert">
+    <div class="flex flex-col gap-10 my-10">
+      {
+        posts.map((post) => (
+          <a
+            href={`/posts/${post.slug}`}
+            class="hover:opacity-75 transition-opacity duration-300 flex flex-col justify-between no-underline"
+          >
+            <h1
+            class="text-xl font-bold leading-tight sm:text-2xl lg:leading-[1.1] transition-colors mb-2"
+              transition:name={`title-${post.data.title}`}
+            >
+              {post.data.title}
+            </h1>
+            <div class="text-sm text-gray-400 flex-shrink-0">
+              <FormattedDate
+                date={post.data.pubDate}
+                name={`date-${post.data.title}`}
+              />
+            </div>
+          </a>
+        ))
+      }
     </div>
-  </Container>
-</PageLayout>
+  </section>
+</Base>
