@@ -1,5 +1,6 @@
 ---
 import FormattedDate from '../components/FormattedDate.astro';
+import BackToPrev from '../components/BackToPrev.astro';
 import Base from '../layouts/Base.astro';
 import { readingTime } from "../lib/utils";
 
@@ -9,23 +10,25 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <Base title={title} description={description} ogImage={ogImage}>
-  <article class="prose prose-invert mx-auto my-20">
+  <article class="prose prose-invert mx-auto my-10">
     <div>
-
-    <div class="space-y-1 my-10">
-      <div class="animate flex items-center gap-1.5">
-        <div class="font-base text-sm">
-          <FormattedDate date={pubDate} name={`date-${title}`} />
+      <BackToPrev href="/">
+        Back
+      </BackToPrev>
+      <div class="space-y-1 my-10">
+        <div class="flex items-center gap-1.5">
+          <div class="font-base text-sm">
+            <FormattedDate date={pubDate} name={`date-${title}`} />
+          </div>
+          &bull;
+          <div class="font-base text-sm">
+            {readingTime(body)}
+          </div>
         </div>
-        &bull;
-        <div class="font-base text-sm">
-          {readingTime(body)}
-        </div>
+        <h1 class="text-2xl sm:text-3xl" transition:name={`title-${title}`}>
+          {title}
+        </h1>
       </div>
-      <h1 class="text-2xl sm:text-3xl" transition:name={`title-${title}`}>
-        {title}
-      </h1>
-    </div>
       <hr />
       <slot />
       <hr />

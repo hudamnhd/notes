@@ -8,7 +8,6 @@ pubDate: "Mar 1 2025"
 
 Source: [Theme switching based on this tweet from Devon Govett](https://twitter.com/devongovett/status/1757131288144663027)
 
-> **note**
 > This method work with Tailwind CSS V3
 
 ## Define theme variables
