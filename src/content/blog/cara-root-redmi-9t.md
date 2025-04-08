@@ -1,6 +1,6 @@
 ---
-title: "Cara Root Redmi 9T"
-description: "Cara Root Redmi 9T dengan magisk"
+title: "Root Redmi 9T"
+description: "Pengalaman melakukan rooting HP Xiaomi Redmi 9T dengan Magisk."
 pubDate: "Apr 4 2025"
 ---
 

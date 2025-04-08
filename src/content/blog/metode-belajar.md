@@ -1,6 +1,6 @@
 ---
 title: "Mengenal 2 Metode Belajar"
-description: "Mengenal 2 Metode Belajar yaitu just in case dan just in time"
+description: "Catatan tentang 2 metode belajar dari video youtube Mas Zain."
 pubDate: "Nov 17 2024"
 ---
 
@@ -50,10 +50,7 @@ pubDate: "Nov 17 2024"
 Saat kita berhenti belajar. Bersiaplah untuk tergilas oleh kemajuan zaman
 Teruslah belajar, tingkatkan terus keahlian dan pengalaman, Insya Allah kemajuan karir akan mengikuti.
 
-### Cara Pencitraan Programmer
-
- [https://mazipan.github.io/blogs/articles/jurus-jitu-pencitraan-buat-para-programmer.md](https://mazipan.github.io/blogs/articles/jurus-jitu-pencitraan-buat-para-programmer.md)
-
 ## Referensi
 
-**Sumber** dari [youtube](https://www.youtube.com/@zainfathoni/) Mas Zain Fathoni.
+- [Youtube Mas Zain Fathoni](https://www.youtube.com/@zainfathoni/)
+- <https://mazipan.github.io/blogs/articles/jurus-jitu-pencitraan-buat-para-programmer.md>

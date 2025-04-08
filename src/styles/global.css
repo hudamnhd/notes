@@ -1,13 +1,12 @@
-/* would like to ignore ./src/pages/og-image/[slug].png.ts */
 @import "tailwindcss";
-/* config for tailwindcss-typography plugin */
+@plugin "@tailwindcss/typography";
 @config "../../tailwind.config.ts";
 
 @layer base {
   body {
     font-family: "Inter", sans-serif;
-    font-weight: 400;
-    @apply antialiased text-gray-900 bg-gray-900;
+    font-weight: 100 900;
+    @apply antialiased text-gray-100 bg-gray-900;
     @apply px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl;
   }
   html {
@@ -17,26 +16,10 @@
     @apply mb-6;
   }
   .content {
-    @apply prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert;
+    @apply prose prose-headings:font-semibold prose-headings:tracking-tight prose-a:decoration-sky-400 prose-a:decoration-wavy sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert;
   }
 }
 
-.prose code:not(pre code) {
-  padding: 0.25em 0.4em;
-  background-color: #24292e;
-  border-radius: 0.3rem;
-  font-weight: 400;
-}
-
-.prose code:not(pre code):before {
-  content: "";
-}
-
-.prose code:not(pre code):after {
-  content: "";
-}
-
-img {
-  border: 1px solid #24292e;
-  border-radius: 10px;
+.copy-code {
+  @apply absolute cursor-pointer top-3 right-3 text-gray-400 hover:text-gray-200;
 }

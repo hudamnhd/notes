@@ -131,6 +131,18 @@ function demo() {
 }
 ```
 
+```html
+<button>
+  <p>
+    Ini paragraf dengan ikon
+    <svg xmlns="http://www.w3.org/2000/svg" class="inline w-[1em] h-[1em]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    inline.
+  </p>
+</button>
+```
+
 [Expressive Code](https://expressive-code.com/) can do a ton more than shown here, and includes a lot of [customisation](https://expressive-code.com/reference/configuration/).
 
 ## Tables

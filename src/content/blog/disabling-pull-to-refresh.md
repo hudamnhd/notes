@@ -1,6 +1,6 @@
 ---
-title: "Disabling pull to refresh"
-description: "Disabling pull-to-refresh (case in google chrome mobile)"
+title: "Disabling pull to refresh Chrome browser"
+description: "Pengalaman mengatasi masalah perilaku bawaan browser Chrome di Android."
 pubDate: "Nov 1 2024"
 ---
 
