@@ -5,22 +5,20 @@
 
 @layer base {
   body {
-		font-family: "Inter", sans-serif;
-		font-weight: 400;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    @apply antialiased text-gray-900 bg-gray-900;
+    @apply px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl;
   }
-	html {
-		color-scheme: light dark;
-	}
-	[data-theme="light"] {
-		--theme-light:initial;
-		--theme-dark: ;
-		color-scheme: light;
-	}
-	[data-theme="dark"] {
-		--theme-light: ;
-		--theme-dark:initial;
-		color-scheme: dark;
-	}
+  html {
+    color-scheme: dark;
+  }
+  main {
+    @apply mb-6;
+  }
+  .content {
+    @apply prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert;
+  }
 }
 
 .prose code:not(pre code) {

@@ -9,11 +9,11 @@ const today = new Date();
 ---
 
 <footer
-  class="mt-auto bg-[#0a0a0b] text-gray-400 pt-10 pb-12 flex text-sm justify-center items-center gap-4"
+  class="mt-auto text-gray-400 pt-6 flex content justify-center items-center gap-4"
 >
-  <div class="flex flex-col items-center gap-5">
+  <div class="flex flex-col items-center gap-5 sm:text-lg">
     &copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
-    <div class="flex gap-5">
+    <div class="flex items-center gap-5">
       <a
         href=`https://github.com/${PREFIX_NAME}`
         class="fill-gray-400 hover:fill-gray-100 transition duration-300"

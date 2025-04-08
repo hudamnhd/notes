@@ -47,8 +47,9 @@ const prevPost = getPrevPost();
 <BlogPost {...post}>
   {headings.length > 0 && <TableOfContents headings={headings} />}
   <Content />
-  <BackToTop />
-  <div class="mt-24">
-    <PostNavigation prevPost={prevPost} nextPost={nextPost} />
-  </div>
+  <br/>
+  <BackToTop client:load/>
+  <br/>
+  <br/>
+  <PostNavigation prevPost={prevPost} nextPost={nextPost} />
 </BlogPost>

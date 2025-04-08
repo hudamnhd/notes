@@ -10,44 +10,53 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <Base title={title} description={description} ogImage={ogImage}>
-  <article class="prose prose-invert mx-auto my-10">
+  <article>
     <div>
       <BackToPrev href="/">
         Back
       </BackToPrev>
-      <div class="space-y-1 my-10">
-        <div class="flex items-center gap-1.5">
-          <div class="font-base text-sm">
+      <div class="space-y-1 my-10 content">
+        <div class="flex items-center gap-2">
+          <div>
             <FormattedDate date={pubDate} name={`date-${title}`} />
           </div>
           &bull;
-          <div class="font-base text-sm">
+          <p class="my-0!">
             {readingTime(body)}
-          </div>
+          </p>
         </div>
-        <h1 class="text-2xl sm:text-3xl" transition:name={`title-${title}`}>
+        <h1 class="my-0!" transition:name={`title-${title}`}>
           {title}
         </h1>
+        <p class="my-3!">
+          {description}
+        </p>
       </div>
       <hr />
-      <slot />
-      <hr />
-      <div>
-        If you like this kind of content you can help me
+      <div class="content"><slot /></div>
+      <br />
+      <div class="content border-t py-6">
+        <p>If you like this kind of content you can help me
         <a
           target="_blank"
           href={`https://x.com/intent/tweet?text=${title + '%0Aby @hudamnhd'}&url=${canonicalURL}`}
         >
           sharing this post on X</a
-        >. Thank you!
+        >. Thank you!</p>
       </div>
     </div>
   </article>
+  <script is:inline>
+    function init() {
+      const scrollBtn = document.getElementById("to-top-btn");
+      scrollBtn.addEventListener("click", () => {
+          document.documentElement.scrollTo({ behavior: "smooth", top: 0 });
+      });
+    }
+
+    document.addEventListener("astro:after-swap", init);
+    init();
+  </script>
 </Base>
 
-<script>
-  const backToTop = document.getElementById("back-to-top") as HTMLButtonElement;
-  backToTop.addEventListener("click", () => {
-      document.documentElement.scrollTo({ behavior: "smooth", top: 0 });
-  });
-</script>
+

@@ -2,7 +2,7 @@
 const { prevPost, nextPost } = Astro.props;
 ---
 
-<div class="flex sm:flex-row flex-col justify-between gap-3 mt-10">
+<div class="flex sm:flex-row flex-col justify-between gap-3 content">
   {
     prevPost?.id ? (
       <a
@@ -27,9 +27,9 @@ const { prevPost, nextPost } = Astro.props;
               class="translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
             />
           </svg>
-          <div class="text-sm font-bold">Prev Post</div>
+          <p class="font-bold my-0!">Prev Post</p>
         </div>
-        <div class="ml-7 flex items-center text-sm line-clamp-1 max-w-[250px]">{prevPost?.data.title}</div>
+        <p class="ml-7 my-0! flex items-center line-clamp-1">{prevPost?.data.title}</p>
       </a>
     ) : (
       <div class="invisible" />
@@ -60,9 +60,9 @@ const { prevPost, nextPost } = Astro.props;
               class="-translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
             />
           </svg>
-          <div class="text-sm font-bold">Next Post</div>
+          <div class="font-bold my-0!">Next Post</div>
         </div>
-        <div class="mr-7 text-end flex justify-end text-sm line-clamp-1 max-w-[250px]">{nextPost?.data.title}</div>
+        <div class="mr-7 my-0! text-end flex justify-end line-clamp-1">{nextPost?.data.title}</div>
       </a>
     ) : (
       <div class="invisible" />
