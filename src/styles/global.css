@@ -16,7 +16,7 @@
     @apply mb-6;
   }
   .content {
-    @apply prose prose-headings:font-semibold prose-headings:tracking-tight prose-a:decoration-sky-400 prose-a:decoration-wavy sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert;
+    @apply prose prose-headings:font-semibold prose-headings:tracking-tight prose-a:decoration-sky-400 prose-a:underline-offset-[4px] sm:prose-a:underline-offset-[6px] prose-a:decoration-wavy sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert;
   }
 }
 
