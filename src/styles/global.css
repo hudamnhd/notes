@@ -66,7 +66,7 @@
 		font-family: "Inter", sans-serif;
 		font-weight: 100 900;
 		@apply antialiased text-foreground bg-background;
-		@apply px-4 py-10 max-w-3xl mx-auto;
+		@apply px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl;
 	}
 	html {
 		color-scheme: light dark;
@@ -98,7 +98,7 @@
 		@apply mb-6;
 	}
 	.content {
-		@apply prose dark:prose-invert;
+		@apply prose dark:prose-invert sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl;
 		@apply prose-headings:font-semibold prose-headings:tracking-tight prose-a:decoration-sky-500 dark:prose-a:decoration-sky-400 prose-a:underline-offset-[4px] prose-a:decoration-wavy;
 	}
 }

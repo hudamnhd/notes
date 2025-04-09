@@ -3,7 +3,7 @@ interface Props {
   date: Date;
 }
 
-const { date, name } = Astro.props;
+const { date } = Astro.props;
 ---
 
 <time datetime={date.toISOString()}>
