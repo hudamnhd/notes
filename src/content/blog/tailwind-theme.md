@@ -1,6 +1,6 @@
 ---
-title: "Example Case Theme with Tailwind Css"
-description: "Implement multi themes with tailwind css"
+title: "Multi Theme Tailwind Css"
+description: "Implement multi themes with Tailwind CSS."
 pubDate: "Mar 1 2025"
 ---
 
