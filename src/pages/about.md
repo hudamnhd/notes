@@ -1,7 +1,7 @@
 ---
 layout: "../layouts/About.astro"
 title: "Tentang"
-description: "An indie hacker and open-source developer from Taiwan, building solutions for real-world challenges. Explore Neovim plugins, SaaS projects, and dev insights here."
+description: "Tentang website dan penulis."
 ---
 
 ## Tentang Penulis
