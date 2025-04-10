@@ -1,14 +1,9 @@
 ---
-import { readingTime } from "../lib/utils";
 import Base from '../layouts/Base.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import { getAllPosts } from "@/data/post";
-import { type CollectionEntry, getCollection, render} from "astro:content";
+import { type CollectionEntry } from "astro:content";
 import PostPreview from "@/components/PostPreview.astro";
-import ArrowCard from "@/components/ArrowCard.astro";
-import Note from "@/components/note/Note.astro";
-
-import { dateRange, collectionDateSort } from "@/utils/date";
+import { collectionDateSort } from "@/utils/date";
 
 const MAX_POSTS = 5;
 const allPosts = await getAllPosts();
