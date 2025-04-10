@@ -27,8 +27,8 @@ function buildToc(headings: Heading[]) {
 }
 ---
 
-<div class="py-4 border-y border-gray-600">
-  <span class="font-medium tracking-tight prose-lg md:prose-xl">Table of Contents:</span>
+<div class="py-4 border-y">
+  <p class="font-medium tracking-tight mb-2 mt-0">Table of Contents:</p>
   <ol class="my-0!">
       {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
   </ol>

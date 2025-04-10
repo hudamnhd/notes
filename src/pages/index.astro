@@ -11,7 +11,7 @@ const posts = (await getCollection('blog')).sort(
 
 <Base>
   <section>
-    <div class="flex flex-col gap-10 my-10 prose dark:prose-invert prose-headings:font-semibold prose-headings:my-0 prose-p:my-0 prose-headings:tracking-tight max-w-none divide-y divide-border">
+    <div class="flex flex-col gap-10 my-10 prose dark:prose-invert prose-headings:font-medium prose-headings:my-0 prose-p:my-0 prose-headings:tracking-tight max-w-none divide-y divide-border">
       {
         posts.map((post) => (
           <a
@@ -21,11 +21,8 @@ const posts = (await getCollection('blog')).sort(
             <h1>
               {post.data.title}
             </h1>
-            <p class="my-0">
-              {post.data.description}
-            </p>
 
-            <div class="flex items-center flex-wrap gap-x-3 gap-y-0 text-sm opacity-80">
+            <div class="flex items-center flex-wrap gap-x-3 gap-y-0 text-sm opacity-80 my-1">
               <p class="flex items-center mb-0 mt-0">
                 <FormattedDate
                   date={post.data.pubDate}
@@ -36,6 +33,9 @@ const posts = (await getCollection('blog')).sort(
                 <span>{readingTime(post.body)}</span>
               </p>
             </div>
+            <p class="leading-5">
+              {post.data.description}
+            </p>
           </a>
         ))
       }
