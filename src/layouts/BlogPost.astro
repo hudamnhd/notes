@@ -1,6 +1,5 @@
 ---
 import FormattedDate from "../components/FormattedDate.astro";
-import BackToPrev from "../components/BackToPrev.astro";
 import Base from "../layouts/Base.astro";
 import { readingTime } from "../lib/utils";
 
@@ -10,31 +9,21 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <Base title={title} description={description} ogImage={ogImage}>
-  <BackToPrev href="/">
-    Back
-  </BackToPrev>
   <article class="content">
     <div>
-      <div class="space-y-1 mb-6 mt-10">
-        <h1 class="my-0!">
+      <div class="mb-6 mt-10">
+        <h1 class="my-2">
           {title}
         </h1>
-        <p class="my-0">
-          {description}
+        <p class="flex items-center text-sm font-medium my-1">
+          <FormattedDate date={publishDate} />
+          <span class="mx-2">&bull; {" "}</span>
+          <span>{readingTime(body)}</span>
         </p>
-        <div class="flex items-center flex-wrap gap-1 font-medium tracking-tight not-prose text-sm sm:text-base">
-          <p class="flex items-center gap-1.5 my-0">
-            <FormattedDate date={publishDate} />
-          </p>
-          /
-          <p class="flex items-center gap-2 my-0">
-            <span>{readingTime(body)}</span>
-          </p>
-        </div>
 
         {
             !!data.tags?.length && (
-                <div class="">
+                <div>
                     <svg
                         aria-hidden="true"
                         class="inline-block h-6 w-6"
@@ -56,7 +45,7 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
                         <>
                             {/* prettier-ignore */}
                             <span class="">
-                    <a class="text-sm  inline-block before:content-['#']" data-pagefind-filter={`tag:${tag}`} href={`/tags/${tag}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span>{tag}
+                    <a class="text-sm no-underline inline-block before:content-['#'] opacity-90" href={`/tags/${tag}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span>{tag}
                                 </a>{i < data.tags.length - 1 && ", "}
                             </span>
                         </>

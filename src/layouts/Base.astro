@@ -12,7 +12,7 @@ const { title, description, ogImage } = Astro.props;
 <html lang={siteConfig.lang}>
   <head>
     <BaseHead
-      title={title ? title + ' | ' +  siteConfig.title : siteConfig.title}
+      title={title ? title : siteConfig.title}
       description={description ? description : siteConfig.description}
       ogImage={ogImage}
     />

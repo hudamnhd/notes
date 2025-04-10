@@ -45,7 +45,7 @@ const prevPost = getPrevPost();
 ---
 
 <BlogPost {...post}>
-  {headings.length > 0 && <TableOfContents headings={headings} />}
+{headings.length > 0 ? <TableOfContents headings={headings} /> : <hr class="my-5"/> }
   <Content />
   <br/>
   <BackToTop />

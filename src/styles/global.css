@@ -5,42 +5,39 @@
 /* use a selector-based strategy for dark mode */
 @variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
+
 :root {
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.13 0.028 261.692);
-	--primary: oklch(0.21 0.034 264.665);
-	--primary-foreground: oklch(0.985 0.002 247.839);
-	--muted: oklch(0.967 0.003 264.542);
-	--muted-foreground: oklch(0.551 0.027 264.364);
-	--accent: oklch(0.967 0.003 264.542);
-	--accent-foreground: oklch(0.21 0.034 264.665);
-	--border: oklch(0.928 0.006 264.531);
-	--ring: oklch(0.707 0.022 261.325);
-	--blue-ld: oklch(0.55 0.22 263);
-	--lime-ld: oklch(0.65 0.18 132);
-	--purple-ld: oklch(0.56 0.25 302);
-	--yellow-ld: oklch(0.68 0.14 76);
-	--red-ld: oklch(0.58 0.22 27);
+  --radius: 0.625rem;
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
 }
 
 &[data-theme="dark"] {
-	--background: oklch(0.13 0.028 261.692);
-	--foreground: oklch(0.985 0.002 247.839);
-	--primary: oklch(0.928 0.006 264.531);
-	--primary-foreground: oklch(0.21 0.034 264.665);
-	--secondary: oklch(0.278 0.033 256.848);
-	--secondary-foreground: oklch(0.985 0.002 247.839);
-	--muted: oklch(0.278 0.033 256.848);
-	--muted-foreground: oklch(0.707 0.022 261.325);
-	--accent: oklch(0.278 0.033 256.848);
-	--accent-foreground: oklch(0.985 0.002 247.839);
-	--border: oklch(1 0 0 / 10%);
-	--ring: oklch(0.551 0.027 264.364);
-	--blue-ld: oklch(0.71 0.14 255);
-	--lime-ld: oklch(0.85 0.21 129);
-	--purple-ld: oklch(0.72 0.18 306);
-	--yellow-ld: oklch(0.86 0.17 92);
-	--red-ld: oklch(0.71 0.17 22);
+  --background: oklch(0.14 0 286);
+  --foreground: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
 }
 
 @theme inline {
@@ -63,24 +60,16 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		font-family: "Recursive", sans-serif;
+		/* font-family: "Inter", sans-serif; */
 		font-optical-sizing: auto;
-		font-weight: 100 900;
+		font-weight: 300 600;
 		@apply min-h-svh flex flex-col;
 		@apply antialiased text-foreground bg-background;
-		@apply px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12;
-	}
-	pre, code {
-		font-family: "Fira Code", monospace;
-		font-optical-sizing: auto;
-		font-weight: 500;
-		font-style: normal;
-	}
-	code span {
-		@apply text-base;
+		@apply px-4 py-10 max-w-2xl mx-auto;
 	}
 	html {
 		color-scheme: light dark;
+		font-size: 17px
 	}
 	[data-theme="light"] {
 		--theme-light: initial;
@@ -109,10 +98,9 @@
 		@apply mb-6;
 	}
 	.content {
-		@apply prose dark:prose-invert sm:prose-base lg:prose-lg;
+		@apply prose prose-neutral dark:prose-invert;
 		@apply prose-headings:font-medium prose-headings:tracking-tight;
-		@apply prose-a:decoration-sky-500 dark:prose-a:decoration-sky-400 prose-a:underline-offset-[4px] prose-a:decoration-wavy;
-		@apply prose-blockquote:border-l-sky-500 prose-blockquote:bg-gray-100 dark:prose-blockquote:border-l-sky-400 dark:prose-blockquote:bg-gray-800 prose-blockquote:rounded;
+		@apply prose-a:underline-offset-[4px];
 		@apply prose-img:rounded-md;
 	}
 	.title {
