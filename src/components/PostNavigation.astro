@@ -6,7 +6,7 @@ const { prevPost, nextPost } = Astro.props;
   {
     prevPost?.id ? (
       <a
-        href={`/posts/${prevPost?.slug}`}
+        href={`/posts/${prevPost?.id}`}
         class="group py-3 no-underline transition-colors duration-300 ease-in-out rounded-md w-fit text-foreground/80 hover:text-foreground font-normal"
       >
         <div class="relative flex items-center gap-2">
@@ -27,7 +27,7 @@ const { prevPost, nextPost } = Astro.props;
               class="translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
             />
           </svg>
-          <p class="font-medium my-0!">Prev Post</p>
+          <p class="font-semibold my-0!">Prev Post</p>
         </div>
         <p class="ml-7 my-0! flex items-center line-clamp-1">{prevPost?.data.title}</p>
       </a>
@@ -39,7 +39,7 @@ const { prevPost, nextPost } = Astro.props;
   {
     nextPost?.id ? (
       <a
-        href={`/posts/${nextPost?.slug}`}
+        href={`/posts/${nextPost?.id}`}
         class="ms-auto group py-3 no-underline transition-colors duration-300 ease-in-out rounded-md w-fit text-foreground/80 hover:text-foreground font-normal"
       >
         <div class="relative flex flex-row-reverse items-center gap-2">
@@ -60,7 +60,7 @@ const { prevPost, nextPost } = Astro.props;
               class="-translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
             />
           </svg>
-          <div class="font-medium my-0!">Next Post</div>
+          <div class="font-semibold my-0!">Next Post</div>
         </div>
         <div class="mr-7 my-0! text-end flex justify-end line-clamp-1">{nextPost?.data.title}</div>
       </a>

@@ -1,15 +1,23 @@
-import { defineCollection, z } from 'astro:content';
+import { glob } from "astro/loaders";
+import { defineCollection, z } from "astro:content";
+
+function removeDupsAndLowerCase(array: string[]) {
+  return [...new Set(array.map((str) => str.toLowerCase()))];
+}
+
+const baseSchema = z.object({
+  title: z.string().max(60),
+});
 
 const blog = defineCollection({
-  type: 'content',
-  // Type-check frontmatter using a schema
-  schema: z.object({
-    title: z.string(),
+  loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
+  schema: baseSchema.extend({
     description: z.string(),
-    // Transform string to Date object
-    pubDate: z.coerce.date(),
+    publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     ogImage: z.string().optional(),
+    draft: z.boolean().default(false),
+    tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
   }),
 });
 

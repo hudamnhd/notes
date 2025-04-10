@@ -1,7 +1,8 @@
 ---
 title: "A post of Markdown elements"
 description: "This post is for testing and listing a number of different markdown elements"
-pubDate: "Nov 1 2024"
+publishDate: "Nov 1 2024"
+tags: ["tutorial"]
 ---
 
 ## This is a H2 Heading

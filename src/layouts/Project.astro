@@ -5,16 +5,15 @@ import Base from "../layouts/Base.astro";
 import { readingTime } from "../lib/utils";
 
 const { data, body } = Astro.props;
-const { title, description, publishDate, ogImage } = data;
-let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const { title, description, date } = data;
 ---
 
-<Base title={title} description={description} ogImage={ogImage}>
-  <BackToPrev href="/">
-    Back
-  </BackToPrev>
+<Base title={title} description={description}>
   <article class="content">
     <div>
+      <BackToPrev href="/">
+        Back
+      </BackToPrev>
       <div class="space-y-1 mb-6 mt-10">
         <h1 class="my-0!">
           {title}
@@ -24,58 +23,41 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
         </p>
         <div class="flex items-center flex-wrap gap-1 font-medium tracking-tight not-prose text-sm sm:text-base">
           <p class="flex items-center gap-1.5 my-0">
-            <FormattedDate date={publishDate} />
+            <FormattedDate date={date} />
           </p>
           /
           <p class="flex items-center gap-2 my-0">
             <span>{readingTime(body)}</span>
           </p>
         </div>
-
-        {
-            !!data.tags?.length && (
-                <div class="">
-                    <svg
-                        aria-hidden="true"
-                        class="inline-block h-6 w-6"
-                        fill="none"
-                        focusable="false"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M0 0h24v24H0z" fill="none" stroke="none" />
-                        <path d="M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z" />
-                        <path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116" />
-                        <path d="M6 9h-.01" />
-                    </svg>
-                    {data.tags.map((tag:string, i:number) => (
-                        <>
-                            {/* prettier-ignore */}
-                            <span class="">
-                    <a class="text-sm  inline-block before:content-['#']" data-pagefind-filter={`tag:${tag}`} href={`/tags/${tag}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span>{tag}
-                                </a>{i < data.tags.length - 1 && ", "}
-                            </span>
-                        </>
-                    ))}
-                </div>
-            )
-        }
+      {(data.demoURL || data.repoURL) && (
+        <nav class="flex items-center gap-2 mt-2">
+        <div>
+          {data.demoURL && (
+            <a
+              class="no-underline inline-flex items-center justify-center rounded-md border px-1.5 text-xs font-semibold w-fit whitespace-nowrap shrink-0 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-[color,box-shadow] [&amp;>svg]:shrink-0 leading-normal border-transparent bg-primary text-primary-foreground [a&amp;]:hover:bg-primary/90"
+              target="_blank" href={data.demoURL}
+              >
+                Preview
+            </a>
+          )}
+          {data.repoURL && (
+            <span
+              class=""
+            >
+              <a
+                class="no-underline inline-flex items-center justify-center rounded-md border px-1.5 text-xs font-semibold w-fit whitespace-nowrap shrink-0 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-[color,box-shadow] [&amp;>svg]:shrink-0 leading-normal border-transparent bg-primary text-primary-foreground [a&amp;]:hover:bg-primary/90"
+                target="_blank" href={data.repoURL}
+                >
+                 Repository
+              </a>
+            </span>
+            )}
+        </div>
+        </nav>
+      )}
       </div>
       <slot />
-      <br />
-      <div class="border-t py-6">
-        <p>If you like this kind of content you can help me
-        <a
-          target="_blank"
-          href={`https://x.com/intent/tweet?text=${title + '%0Aby @hudamnhd'}&url=${canonicalURL}`}
-        >
-          sharing this post on X</a
-        >. Thank you!</p>
-      </div>
     </div>
   </article>
   <script is:inline>

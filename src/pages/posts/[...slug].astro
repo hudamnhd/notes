@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import BlogPost from '../../layouts/BlogPost.astro';
 import TableOfContents from "../../components/TableOfContents.astro";
 import BackToTop from "../../components/BackToTop.astro";
@@ -8,22 +8,22 @@ import PostNavigation from '../../components/PostNavigation.astro';
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: post,
   }));
 }
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { Content, headings } = await post.render();
+const { Content, headings } = await render(post);
 
 const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 
 function getNextPost() {
   let postIndex;
   for (const post of posts) {
-    if (post.slug === Astro.params.slug) {
+    if (post.id === Astro.params.slug) {
       postIndex = posts.indexOf(post);
       return posts[postIndex + 1];
     }
@@ -33,7 +33,7 @@ function getNextPost() {
 function getPrevPost() {
   let postIndex;
   for (const post of posts) {
-    if (post.slug === Astro.params.slug) {
+    if (post.id === Astro.params.slug) {
       postIndex = posts.indexOf(post);
       return posts[postIndex - 1];
     }

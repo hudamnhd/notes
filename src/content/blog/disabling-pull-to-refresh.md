@@ -1,7 +1,8 @@
 ---
 title: "Disabling pull to refresh Chrome browser"
 description: "Pengalaman mengatasi masalah perilaku bawaan browser Chrome di Android."
-pubDate: "Nov 1 2024"
+publishDate: "Nov 1 2024"
+tags: ["css"]
 ---
 
 ## Pengalaman Mengatasi Masalah Aplikasi Web di Browser Mobile

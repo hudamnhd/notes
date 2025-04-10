@@ -1,7 +1,8 @@
 ---
 title: "Multi Theme Tailwind Css"
 description: "Implement multi themes with Tailwind CSS."
-pubDate: "Mar 1 2025"
+publishDate: "Mar 1 2025"
+tags: ["tailwindcss", "css"]
 ---
 
 ## Reference

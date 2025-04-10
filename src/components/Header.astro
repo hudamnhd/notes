@@ -1,13 +1,13 @@
 ---
 import ThemeToggle from "@/components/ThemeToggle.astro";
-import { SLASH } from '../consts';
+import { siteConfig } from "@/site.config";
 ---
 
 <header>
   <nav class="flex items-center justify-between h-14 mb-10">
     <div class="flex items-center prose">
-      <a href="/" class="text-foreground tracking-tight text-3xl font-medium underline decoration-sky-500 dark:decoration-sky-400 decoration-wavy underline-offset-[10px] decoration-[2px]">
-        📝{SLASH}
+      <a href="/" class="text-foreground tracking-tight text-xl font-medium underline decoration-sky-500 dark:decoration-sky-400 decoration-wavy underline-offset-[5px] decoration-[2px]">
+        📝 {siteConfig.title}
       </a>
     </div>
     <ThemeToggle />

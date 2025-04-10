@@ -1,7 +1,9 @@
 ---
 title: "Root Redmi 9T"
 description: "Pengalaman melakukan rooting HP Xiaomi Redmi 9T dengan Magisk."
-pubDate: "Apr 4 2025"
+publishDate: "Apr 4 2025"
+tags: ["tutorial"]
+updatedDate: 5 Apr 2024
 ---
 
 ## Pengalaman Pertama Saya
