@@ -15,9 +15,6 @@
               blockquote: {
                 "font-style": "normal",
               },
-              blockquote: {
-                "font-style": "normal",
-              },
               p: {
                 "font-size": "17px",
               },
