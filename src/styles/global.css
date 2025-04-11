@@ -98,7 +98,7 @@
 		@apply mb-6;
 	}
 	.content {
-		@apply prose prose-neutral dark:prose-invert;
+		@apply prose prose-lg prose-neutral dark:prose-invert;
 		@apply prose-headings:font-medium prose-headings:tracking-tight;
 		@apply prose-a:underline-offset-[4px];
 		@apply prose-img:rounded-md;
