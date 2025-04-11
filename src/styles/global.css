@@ -69,7 +69,6 @@
 	}
 	html {
 		color-scheme: light dark;
-		font-size: 17px
 	}
 	[data-theme="light"] {
 		--theme-light: initial;
@@ -98,7 +97,7 @@
 		@apply mb-6;
 	}
 	.content {
-		@apply prose prose-lg prose-neutral dark:prose-invert;
+		@apply prose prose-neutral dark:prose-invert;
 		@apply prose-headings:font-medium prose-headings:tracking-tight;
 		@apply prose-a:underline-offset-[4px];
 		@apply prose-img:rounded-md;

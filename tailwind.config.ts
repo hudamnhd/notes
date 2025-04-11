@@ -15,11 +15,30 @@
               blockquote: {
                 "font-style": "normal",
               },
+              blockquote: {
+                "font-style": "normal",
+              },
+              p: {
+                "font-size": "17px",
+              },
               code: {
                 border: "1px solid var(--border)",
                 borderRadius: "2px",
                 backgroundColor: "var(--accent)",
               },
+            },
+          },
+          neutral: {
+            css: {
+            "--tw-prose-headings": "var(--color-neutral-700)",
+            "h1": {
+              fontWeight: "600",
+            },
+            "--tw-prose-invert-headings": "var(--color-neutral-300)",
+            '--tw-prose-links': "var(--color-neutral-800)",
+            '--tw-prose-bold': "var(--color-neutral-800)",
+            '--tw-prose-invert-links': "var(--color-neutral-200)",
+            '--tw-prose-invert-bold': "var(--color-neutral-200)",
             },
           },
           quoteless: {
