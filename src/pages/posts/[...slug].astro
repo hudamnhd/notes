@@ -45,11 +45,9 @@ const prevPost = getPrevPost();
 ---
 
 <BlogPost {...post}>
-{headings.length > 0 ? <TableOfContents headings={headings} /> : <hr class="my-5"/> }
+{headings.length > 0 ? <TableOfContents headings={headings} /> : <div class="my-5 border-b border-accent-foreground"/> }
   <Content />
   <br/>
   <BackToTop />
-  <br/>
-  <br/>
   <PostNavigation prevPost={prevPost} nextPost={nextPost} />
 </BlogPost>

@@ -6,6 +6,14 @@
         typography: () => ({
           DEFAULT: {
             css: {
+              a: {
+                  textUnderlineOffset: "2px",
+                  "&:hover": {
+                      "@media (hover: hover)": {
+                          textDecorationThickness: "2px",
+                      },
+                  },
+              },
               "h1 a": {
                 "text-decoration": "none",
               },
@@ -15,27 +23,34 @@
               blockquote: {
                 "font-style": "normal",
               },
-              p: {
-                "font-size": "17px",
-              },
               code: {
                 border: "1px solid var(--border)",
                 borderRadius: "2px",
                 backgroundColor: "var(--accent)",
               },
+              pre: {
+                border: "1px solid var(--border)",
+              },
+              'ol > li::marker': {
+                fontWeight: '400',
+                color: 'var(--tw-prose-body)',
+              },
+              'ul > li::marker': {
+                color: 'var(--muted-foreground)',
+              },
             },
           },
-          neutral: {
+          gray: {
             css: {
-            "--tw-prose-headings": "var(--color-neutral-700)",
+            "--tw-prose-headings": "var(--color-gray-700)",
             "h1": {
               fontWeight: "600",
             },
-            "--tw-prose-invert-headings": "var(--color-neutral-300)",
-            '--tw-prose-links': "var(--color-neutral-800)",
-            '--tw-prose-bold': "var(--color-neutral-800)",
-            '--tw-prose-invert-links': "var(--color-neutral-200)",
-            '--tw-prose-invert-bold': "var(--color-neutral-200)",
+            "--tw-prose-invert-headings": "var(--color-gray-300)",
+            '--tw-prose-links': "var(--color-gray-800)",
+            '--tw-prose-bold': "var(--color-gray-800)",
+            '--tw-prose-invert-links': "var(--color-gray-200)",
+            '--tw-prose-invert-bold': "var(--color-gray-200)",
             },
           },
           quoteless: {

@@ -2,7 +2,7 @@
 const { prevPost, nextPost } = Astro.props;
 ---
 
-<div class="flex sm:flex-row flex-col justify-between gap-3 content text-sm max-w-2xl">
+<div class="flex sm:flex-row flex-col justify-between gap-3 max-w-full mb-2 prose prose-gray prose-base xl:prose-lg dark:prose-invert">
   {
     prevPost?.id ? (
       <a

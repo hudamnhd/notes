@@ -8,43 +8,45 @@ import RSS from '../icons/RSS.astro';
 const today = new Date();
 ---
 
+<div class="border-b border-accent-foreground mt-auto"/>
 <footer
-  class="mt-auto pt-6 flex content justify-center items-center gap-4"
+  class="pt-5 flex content justify-center items-center gap-4 prose prose-gray prose-base xl:prose-lg dark:prose-invert prose-headings:tracking-tight max-w-none"
 >
-  <div class="flex flex-col items-center gap-3 text-sm">
+
+<div class="flex sm:flex-row flex-col items-center justify-between gap-3 w-full text-foreground/90">
     &copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
     <div class="flex items-center gap-5">
       <a
         href=`https://github.com/${PREFIX_NAME}`
-        class="fill-foreground/70 hover:fill-foreground transition duration-300"
+        class="fill-foreground/80 hover:fill-foreground transition duration-300"
         aria-label="GitHub"
       >
         <GitHub />
       </a>
       <a
         href=`https://x.com/${PREFIX_NAME}`
-        class="fill-foreground/70 hover:fill-foreground transition duration-300"
+        class="fill-foreground/80 hover:fill-foreground transition duration-300"
         aria-label="X"
       >
         <X />
       </a>
       <a
         href=`https://www.linkedin.com/in/${PREFIX_NAME}`
-        class="fill-foreground/70 hover:fill-foreground transition duration-300"
+        class="fill-foreground/80 hover:fill-foreground transition duration-300"
         aria-label="LinkedIn"
       >
         <LinkedIn />
       </a>
       <a
         href="mailto:muhamadhuda519@gmail.com"
-        class="fill-foreground/70 hover:fill-foreground transition duration-300"
+        class="fill-foreground/80 hover:fill-foreground transition duration-300"
         aria-label="Email"
       >
         <Email />
       </a>
       <a
         href="/rss.xml"
-        class="fill-foreground/70 hover:fill-foreground transition duration-300"
+        class="fill-foreground/80 hover:fill-foreground transition duration-300"
         aria-label="RSS"
       >
         <RSS />
