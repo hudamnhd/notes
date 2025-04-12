@@ -42,11 +42,11 @@
           },
           gray: {
             css: {
-            "--tw-prose-headings": "var(--color-gray-700)",
+            "--tw-prose-headings": "var(--color-gray-800)",
             "h1": {
               fontWeight: "600",
             },
-            "--tw-prose-invert-headings": "var(--color-gray-300)",
+            "--tw-prose-invert-headings": "var(--color-gray-200)",
             '--tw-prose-links': "var(--color-gray-800)",
             '--tw-prose-bold': "var(--color-gray-800)",
             '--tw-prose-invert-links': "var(--color-gray-200)",
