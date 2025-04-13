@@ -97,7 +97,7 @@
 	.content {
 		@apply prose prose-gray prose prose-lg xl:prose-xl dark:prose-invert max-w-full;
 		@apply prose-headings:font-medium prose-headings:tracking-tight;
-		@apply prose-a:underline-offset-[4px] prose-a:break-all tracking-tight;
+		@apply prose-a:underline-offset-[4px] prose-a:break-all;
 		@apply prose-img:rounded-md;
 		@apply prose-p:tracking-tight;
 	}

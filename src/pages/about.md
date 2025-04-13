@@ -10,5 +10,5 @@ Halo, saya **Muhammad Nur Huda**, seorang front-end developer yang saat ini berl
 
 ## Tentang Web
 
-Web ini adalah kumpulan catatan pribadi saya, terutama berisi rangkuman dan poin-poin penting dari tulisan yang saya baca, video yang saya tonton ataupun audio yang saya dengar. Tujuannya adalah sebagai arsip digital agar saya dapat dengan mudah mengakses dan mengulang pelajaran yang telah saya dapatkan.
+Web ini adalah kumpulan catatan pribadi saya, terutama berisi tulisan yang saya salin ataupun rangkuman poin-poin penting dari tulisan yang saya baca, video yang saya tonton ataupun audio yang saya dengar. Tujuannya adalah sebagai arsip digital agar saya dapat dengan mudah mengakses dan mengulang pelajaran yang telah saya dapatkan.
 
