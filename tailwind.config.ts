@@ -31,26 +31,19 @@
               pre: {
                 border: "1px solid var(--border)",
               },
-              'ol > li::marker': {
-                fontWeight: '400',
-                color: 'var(--tw-prose-body)',
-              },
-              'ul > li::marker': {
-                color: 'var(--muted-foreground)',
-              },
             },
           },
-          gray: {
+          neutral: {
             css: {
-            "--tw-prose-headings": "var(--color-gray-800)",
+            "--tw-prose-headings": "var(--color-neutral-800)",
             "h1": {
               fontWeight: "600",
             },
-            "--tw-prose-invert-headings": "var(--color-gray-200)",
-            '--tw-prose-links': "var(--color-gray-800)",
-            '--tw-prose-bold': "var(--color-gray-800)",
-            '--tw-prose-invert-links': "var(--color-gray-200)",
-            '--tw-prose-invert-bold': "var(--color-gray-200)",
+            "--tw-prose-invert-headings": "var(--color-neutral-200)",
+            '--tw-prose-links': "var(--color-neutral-800)",
+            '--tw-prose-bold': "var(--color-neutral-800)",
+            '--tw-prose-invert-links': "var(--color-neutral-200)",
+            '--tw-prose-invert-bold': "var(--color-neutral-200)",
             },
           },
           quoteless: {

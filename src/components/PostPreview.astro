@@ -4,7 +4,7 @@ import { readingTime } from "../lib/utils";
 const { post } = Astro.props;
 ---
 
-<div class="mb-6 mt-10 prose prose-gray dark:prose-invert prose-headings:tracking-tight">
+<div class="mb-6 mt-10 prose prose-neutral dark:prose-invert prose-headings:tracking-tight max-w-none">
   <p class="capitalize font-medium my-1! tracking-tighter!">{readingTime(post.body)}</p>
   <a href={`/posts/${post.id}`}>
     <h1 class="mb-0!">

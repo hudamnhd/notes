@@ -27,28 +27,38 @@ tags: ["belajar"]
 
 ### Contoh : Pengen Buat Aplikasi Mobile
 
-> - Belajar dari no 1-10
-> - Jadi di sini konsepnya kita tidak boleh skip apabila tidak paham study nya.
-> - Kita belajar react native, ketika mentok kita belajar react js dst sampai kita benar-benar paham cara kerjanya.
+- Jadi di sini konsepnya kita tidak boleh skip apabila tidak paham study nya.
+- Kita belajar react native, ketika mentok kita belajar react js dst sampai kita benar-benar paham cara kerjanya.
 
-1. Belajar React Native.
-> Jika tidak paham konsep React Native berarti harus belajar React JS.
-2. React JS.
-> Bingung dengan `{}` akhirnya belajar ES6.
-3. ES6 .
-> Bingung dengan *arrow function syntax / `() =>` * belajar js dasar.
-4. Javascript.
-> Bingung bagaimana script bisa berjalan di browser lalu belajar Web dasar.
-5. WEB.
-> Cara kerja web client komunikasi dengan server akhirnya belajar HTTP.
-6. HTTP.
-> ternyata ada method `get` `post` , bagaimana cara kerjanya ?
-7. Jaringan komputer.
-> gimana komunikasi TCP, IP dll oh ternyata ada OS.
-8. OS
-> Apa yg terjadi di dalam OS.
-9. Biner.
-10. Sistem digital.
+1. **React Native**
+   Mulai dari belajar React Native, yang membuat saya menyadari pentingnya mempelajari React JS terlebih dahulu.
+
+2. **React JS**
+   Awalnya bingung dengan sintaks `{}`. Itu memotivasi saya untuk belajar **ES6** lebih dalam.
+
+3. **ES6**
+   Ketika menghadapi kebingungan dengan *arrow function* (`() =>`), saya pun belajar lebih banyak tentang **JavaScript dasar**.
+
+4. **JavaScript**
+   Saya penasaran bagaimana script dapat berjalan di browser, jadi saya belajar tentang **Web dasar**.
+
+5. **Web**
+   Memahami bagaimana web bekerja, terutama komunikasi antara client dan server, akhirnya membawa saya untuk mempelajari **HTTP**.
+
+6. **HTTP**
+   Terkejut dengan metode `GET` dan `POST`, saya mempelajari lebih lanjut bagaimana cara kerjanya.
+
+7. **Jaringan Komputer**
+   Rasa penasaran tentang komunikasi TCP, IP, dan protokol lainnya membuat saya mempelajari **Sistem Operasi (OS)**.
+
+8. **OS**
+   Apa yang terjadi di dalam **Operating System (OS)**? Ini jadi pertanyaan utama yang mendorong saya untuk menggali lebih jauh.
+
+9. **Biner**
+   Konsep **Biner** menjadi dasar untuk memahami lebih dalam tentang sistem digital.
+
+10. **Sistem Digital**
+    Pelajaran tentang **Sistem Digital** memperluas wawasan tentang bagaimana dunia digital bekerja.
 
 ### Jangan Alergi Membaca
 
