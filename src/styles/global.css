@@ -110,3 +110,7 @@
 	@apply absolute cursor-pointer top-1 right-1 text-muted-foreground hover:text-foreground hover:bg-accent size-6 inline-flex items-center justify-center bg-accent rounded;
 }
 
+
+mark {
+  @apply bg-lime-400 text-black px-1.5 py-0.5 rounded-md
+}
