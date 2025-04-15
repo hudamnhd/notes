@@ -68,7 +68,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 						</h2>
 						<ul class="mt-5 mb-16 text-start divide-y">
 							{groupedByYear[yearKey]?.map((p) => (
-								<li class="ms-4">
+								<li class="ms-3">
 									<PostPreview post={p} />
 								</li>
 							))}
