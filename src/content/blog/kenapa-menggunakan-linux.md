@@ -71,7 +71,7 @@ Dari semua diatas aku sangat menyukai DWM karena sangat sedikiti shorcut yang ak
 Aku hanya mengubah sedikit konfigurasi bawaan dari user interface cuma mengubah jenis huruf dan
 untuk tidak menambahkan nya lagi `shorcut`, kemudian untuk penambahan shorcut aku menggunakan `sxhkd`.
 
-```sxhkdrc
+```plaintext
 super + x
 	st
 ```
