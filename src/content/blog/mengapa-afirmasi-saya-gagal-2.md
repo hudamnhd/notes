@@ -2,7 +2,7 @@
 title: "Mengapa Afirmasi Saya Gagal Bagian 2"
 description: "Mengapa Afirmasi Saya Gagal Bagian 2"
 publishDate: "Jun 25 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 Seorang guru spiritual mengajarkan kepada murid-muridnya untuk tidak melihat dengan mata dan tidak mendengar dengan telinga. Melihatlah dengan penglihatan dan mendengar dengan pendengaran.

@@ -2,7 +2,7 @@
 title: "Diabetes Bukan Kondisi Permanen"
 description: "Alasan kenapa kondisi diabetes harus menjaga keseimbangan cairan dengan minum air sebanyak mungkin semampunya setiap setelah buang air kecil."
 publishDate: "Aug 24 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 > Alasan kenapa kondisi diabetes harus menjaga keseimbangan cairan

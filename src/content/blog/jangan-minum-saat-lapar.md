@@ -2,7 +2,7 @@
 title: "Jangan Minum Saat Lapar"
 description: "Renungan Autofagi: Jangan Minum Saat Lapar"
 publishDate: "Jun 26 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 Awalnya saya ragu untuk terus mengkaji mekanisme autofagi. Terlalu banyak fakta yang mengejutkan yang saya temukan. Fakta yang berkaitan dengan apa yang selama ini diyakini sebagai sebuah kebenaran dalam dunia kesehatan.

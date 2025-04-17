@@ -2,7 +2,7 @@
 title: "Mengapa Afirmasi Saya Gagal"
 description: "Mengapa Afirmasi Saya Gagal"
 publishDate: "Jun 22 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 Selama ini anda mengenal sistem imunitas saat tubuh terkena infeksi. Hingga pengertian kita tentang imunitas jadi terbatas. Padahal dalam kesehatan mental juga dikenal sistem imunitas.

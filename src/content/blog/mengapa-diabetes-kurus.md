@@ -2,7 +2,7 @@
 title: "Mengapa Diabetesi Kurus"
 description: "Renungan Autofagi : Mengapa Diabetesi Kurus."
 publishDate: "Jun 15 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 Pada penderita diabetes seringkali ditemukan kondisi penurunan berat badan yang hebat. Hingga seringkali gejala mengarahkan kecurigaan para dokter tentang diabetes selalu diawali dari penurunan berat badan.

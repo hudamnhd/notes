@@ -2,7 +2,7 @@
 title: "Tembakau Sebagai Anti Kanker"
 description: "Renungan Autofagi: Tembakau Sebagai Anti Kanker"
 publishDate: "Jun 19 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 Tahun 2014 ada berita yang cukup menghebohkan dunia kesehatan Indonesia. Mengapa tidak, saat ada pengakuan seorang guru besar farmasi, Profesor Sutiman. Profesor Sutiman adalah guru besar dari sebuah Universitas Negeri ternama di Jawa Timur. Beliau mengakui jika istrinya sembuh dari penyakit kanker lewat metoda asap rokok.

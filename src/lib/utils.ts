@@ -7,6 +7,7 @@ export function formatDate(date: Date) {
 }
 
 export function readingTime(html: string) {
+  if (!html) return ""
   const textOnly = html.replace(/<[^>]+>/g, "");
   const wordCount = textOnly.split(/\s+/).length;
   const readingTimeMinutes = ((wordCount / 200) + 1).toFixed();

@@ -2,7 +2,7 @@
 title: "Hipertensi"
 description: "Renungan Autofagi : Hipertensi"
 publishDate: "Jun 15 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 Banyak sejawat yang bertanya tentang hubungan hipertensi dan mekanisme autofagi. (Kaget juga, dapat pertanyaan dari sejawat. Kirain mereka cuek-cuek saja dengan status-status yang dibuat). Autofagi itu hanya berkaitan dengan metabolisme glukosa sedangkan hipertensi lebih dekat pada regulasi elektrolit.

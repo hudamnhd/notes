@@ -50,14 +50,14 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 ---
 
 <PageLayout meta={meta}>
-	<div class="mb-6 flex items-center gap-3">
+	<div class="mb-6 flex items-center gap-3" data-pagefind-ignore>
 		<h1 class="title">Posts</h1>
 		<a href="/rss.xml" target="_blank">
 			<span class="sr-only">RSS feed</span>
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss-icon lucide-rss"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
 		</a>
 	</div>
-	<div class="grid gap-y-10 mb-10">
+	<div class="grid gap-y-10 mb-10" data-pagefind-ignore>
 		<div class="divide-y divide-accent-foreground">
 			{
 				descYearKeys.map((yearKey) => (

@@ -27,7 +27,7 @@ function buildToc(headings: Heading[]) {
 }
 ---
 
-<div class="pt-5 border-t border-accent-foreground prose prose-neutral prose-base dark:prose-invert prose-headings:tracking-tight">
+<div class="pt-5 border-t border-accent-foreground prose prose-neutral prose-base dark:prose-invert prose-headings:tracking-tight" data-pagefind-ignore>
   <h2 class="font-medium tracking-tight mb-0!">Table of Contents:</h2>
   <ol class="my-0">
       {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}

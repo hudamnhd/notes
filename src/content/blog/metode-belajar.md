@@ -2,7 +2,7 @@
 title: "Mengenal 2 Metode Belajar"
 description: "Catatan tentang 2 metode belajar dari video youtube Mas Zain."
 publishDate: "Nov 17 2024"
-tags: ["belajar"]
+tags: ["learn"]
 ---
 
 ## Just In Case Learning

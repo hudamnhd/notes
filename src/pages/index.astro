@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getAllPosts } from "@/data/post";
+import { getAllPosts, getUniqueTagsWithCount } from "@/data/post";
 import { type CollectionEntry } from "astro:content";
 import PostPreview from "@/components/PostPreview.astro";
 import { collectionDateSort } from "@/utils/date";
@@ -10,9 +10,30 @@ const allPosts = await getAllPosts();
 const allPostsByDate = allPosts
 	.sort(collectionDateSort)
 	.slice(0, MAX_POSTS) as CollectionEntry<"blog">[];
+
+const allTags = getUniqueTagsWithCount(allPosts);
 ---
 <Base>
-  <section>
+  <section data-pagefind-ignore>
+      <ul class="mb-auto flex flex-wrap gap-2 border-b pb-4" data-pagefind-ignore>
+              {
+                      allTags.map(([tag, val]) => (
+                          <li>
+                                  <a
+                                    class="border px-2 py-1 rounded-md text-sm no-underline font-medium underline-offset-[4px] inline-block"
+                                    data-astro-prefetch
+                                    href={`/tags/${tag}/`}
+                                    title={`View posts with the tag: ${tag}`}
+                                  >
+                                      &#35;{tag}
+                                      <span class="inline-block bg-foreground text-background rounded-md px-1 min-w-4 text-center font-semibold text-xs">
+                                              {val}
+                                      </span>
+                                  </a>
+                          </li>
+                      ))
+              }
+      </ul>
     <ul class="mb-10 text-start space-y-1 divide-y">
       {allPostsByDate.map((p) => (
         <li>

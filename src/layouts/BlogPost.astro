@@ -10,11 +10,11 @@ const { title, description, publishDate, ogImage } = data;
   <article class="content">
     <div>
       <div class="mb-6 mt-10 prose prose-neutral prose-base dark:prose-invert prose-headings:tracking-tight max-w-none">
-        <p class="capitalize font-medium mb-2! tracking-tighter!">{readingTime(body)}</p>
+        <p class="capitalize font-medium mb-2! tracking-tighter!" data-pagefind-ignore>{readingTime(body)}</p>
         <h1 class="mb-2!">
           {title}
         </h1>
-        <div class="flex items-center gap-2 font-medium">
+        <div class="flex items-center gap-2 font-medium" data-pagefind-ignore>
           <span class="tracking-tighter">{publishDate.toLocaleDateString('en-CA')}</span>
         {
             !!data.tags?.length && (

@@ -2,7 +2,7 @@
 title: "Mengatasi Depresi Tanpa Psikotropika"
 description: "Renungan Autofagi : Mengatasi Depresi Tanpa Psikotropika"
 publishDate: "Aug 6 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 

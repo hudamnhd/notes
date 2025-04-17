@@ -2,7 +2,7 @@
 title: "Sisi Buruk Autofagi, Diabetes"
 description: "Renunang Sisi Buruk Autofagi, Diabetes."
 publishDate: "Aug 8 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 Untuk memahami autofagi seperti yang dijelaskan oleh Profesor Christian de Duve sebaiknya juga mempekajari tentang diabetes. Ini adalah titik awal Profesor de Duve menemukan mekanisme autofagi. Tidak hanya sisi baik tapi juga sisi buruknya. Diabetes adalah sisi buruk autofagi!

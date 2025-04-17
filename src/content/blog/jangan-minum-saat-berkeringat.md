@@ -2,7 +2,7 @@
 title: "Jangan Minum Saat Berkeringat"
 description: "Renungan Autofagi: Jangan Minum Saat Berkeringat"
 publishDate: "Jun 16 2022"
-tags: ["Kesehatan"]
+tags: ["health"]
 ---
 
 Setelah postingan hipertensi banyak sekali pertanyaan tentang bagaimana mengendalikan asupan air. Apakah artinya tidak boleh minum? Apakah harus banyak minum?
