@@ -4,12 +4,12 @@ import { readingTime } from "../lib/utils";
 const { post } = Astro.props;
 ---
 
-<div class="mb-6 mt-10 prose prose-neutral dark:prose-invert prose-headings:tracking-tight max-w-none">
-  <p class="capitalize my-1! tracking-tighter!">{readingTime(post.body)}</p>
-  <a href={`/posts/${post.id}`}>
-    <h1 class="mb-0!">
+<div class="my-5 prose prose-gray dark:prose-invert prose-headings:tracking-tight max-w-none">
+  <p class="capitalize my-1! tracking-tighter! text-sm">{readingTime(post.body)}</p>
+  <a href={`/posts/${post.id}`} class="">
+    <h2 class="my-0! font-semibold">
       {post.data.title}
-    </h1>
+    </h2>
   </a>
   <p class="capitalize my-1! tracking-tighter!">{post.data.description}</p>
   <div class="flex items-center gap-2">

@@ -14,15 +14,13 @@ tags: ["learn"]
 
 ## Just In Time Learning
 
-1. Pelajari hanya yang dibutuhkan dalam waktu dekat.
-
-> Misalnya pengen buat Single Page Aplication jadi langsung belajar React js.
+1. Pelajari hanya yang dibutuhkan dalam waktu dekat. Misalnya pengen buat **Single Page Aplication** jadi langsung belajar **React js**.
 
 2. Belajar dan praktikum berjalan beriringan artinya begitu belajar langsung diterapkan.
 
 ### Kupas Tuntas Sampai Akarnya
 
-1. Inilah cara belajar Elon Musk https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html
+1. [Cara Belajar Elon Musk.](https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html)
 2. Apabila tidak mengerti cara kerja suatu teknologi, terus gali lebih dalam hingga konsep yang paling dasar.
    - Jadi di sini konsepnya kita tidak boleh skip apabila tidak paham study nya.
    - Kita belajar react native, ketika mentok kita belajar react js dst sampai kita benar-benar paham cara kerjanya.

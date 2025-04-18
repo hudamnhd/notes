@@ -10,11 +10,11 @@ const { title, description, publishDate, ogImage } = data;
   <article class="content">
     <div>
       <div class="mb-6 mt-10">
-        <p class="capitalize mb-2!" data-pagefind-ignore>{readingTime(body)}</p>
+        <p class="capitalize mb-2 text-base!" data-pagefind-ignore>{readingTime(body)}</p>
         <h1 class="mb-2!">
           {title}
         </h1>
-        <div class="flex items-center gap-2" data-pagefind-ignore>
+        <div class="flex items-center gap-2 text-base" data-pagefind-ignore>
           <span class="">{publishDate.toLocaleDateString('en-CA')}</span>
         {
             !!data.tags?.length && (
@@ -23,7 +23,7 @@ const { title, description, publishDate, ogImage } = data;
                         <>
                             {/* prettier-ignore */}
                             <span class="">
-                          <a class="before:content-['#'] font-normal" href={`/tags/${tag}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span>{tag}
+                              <a class="before:content-['#'] font-normal text-foreground" href={`/tags/${tag}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span>{tag}
                                 </a>{i < data.tags.length - 1 && ", "}
                             </span>
                         </>
@@ -32,7 +32,7 @@ const { title, description, publishDate, ogImage } = data;
             )
         }
         </div>
-        <hr class="border-foreground my-4"/>
+        <hr class="border-foreground/50 my-4"/>
       </div>
       <slot />
     </div>

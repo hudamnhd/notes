@@ -26,10 +26,13 @@ function buildToc(headings: Heading[]) {
   return toc;
 }
 ---
-
-<div data-pagefind-ignore class="bg-accent px-4 py-3 max-w-fit rounded-md border">
-  <h3 class="my-1 text-lg">Table of Contents:</h3>
-  <ol class="marker:text-foreground/70 marker:font-bold">
-      {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
-  </ol>
-</div>
+<details class="rounded-md details-content:mt-3 details-content:ml-5" open data-pagefind-ignore>
+  <summary class="sm:text-lg leading-6 font-semibold select-none text-foreground">
+  Table of Contents
+  </summary>
+  <div class="px-4 py-2 bg-accent/20 mt-3 rounded-md border">
+    <ol class="marker:font-medium my-0">
+        {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
+    </ol>
+  </div>
+</details>
