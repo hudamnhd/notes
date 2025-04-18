@@ -5,14 +5,14 @@ const { post } = Astro.props;
 ---
 
 <div class="mb-6 mt-10 prose prose-neutral dark:prose-invert prose-headings:tracking-tight max-w-none">
-  <p class="capitalize font-medium my-1! tracking-tighter! text-muted-foreground">{readingTime(post.body)}</p>
+  <p class="capitalize my-1! tracking-tighter!">{readingTime(post.body)}</p>
   <a href={`/posts/${post.id}`}>
     <h1 class="mb-0!">
       {post.data.title}
     </h1>
   </a>
-  <p class="capitalize font-medium my-1! tracking-tighter! text-muted-foreground">{post.data.description}</p>
-  <div class="flex items-center gap-2 font-medium text-muted-foreground">
+  <p class="capitalize my-1! tracking-tighter!">{post.data.description}</p>
+  <div class="flex items-center gap-2">
     <span class="tracking-tighter">{post.data.publishDate.toLocaleDateString('en-CA')}</span>
   {
       !!post.data.tags?.length && (
@@ -21,7 +21,7 @@ const { post } = Astro.props;
                   <>
                       {/* prettier-ignore */}
                       <span class="">
-                    <a class="text-muted-foreground tracking-tight before:content-['#']" href={`/tags/${tag}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span>{tag}
+                    <a class="tracking-tight before:content-['#']" href={`/tags/${tag}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span>{tag}
                           </a>{i < post.data.tags.length - 1 && ", "}
                       </span>
                   </>

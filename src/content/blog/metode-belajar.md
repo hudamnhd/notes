@@ -24,10 +24,8 @@ tags: ["learn"]
 
 1. Inilah cara belajar Elon Musk https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html
 2. Apabila tidak mengerti cara kerja suatu teknologi, terus gali lebih dalam hingga konsep yang paling dasar.
-
-
-> - Jadi di sini konsepnya kita tidak boleh skip apabila tidak paham study nya.
-> - Kita belajar react native, ketika mentok kita belajar react js dst sampai kita benar-benar paham cara kerjanya.
+   - Jadi di sini konsepnya kita tidak boleh skip apabila tidak paham study nya.
+   - Kita belajar react native, ketika mentok kita belajar react js dst sampai kita benar-benar paham cara kerjanya.
 
 ### Contoh : Pengen Buat Aplikasi Mobile
 

@@ -20,13 +20,13 @@ const allTags = getUniqueTagsWithCount(allPosts);
                       allTags.map(([tag, val]) => (
                           <li>
                                   <a
-                                    class="border px-2 py-1 rounded-md text-sm no-underline font-medium underline-offset-[4px] inline-block"
+                                    class="border px-2 py-1 rounded-md text-sm no-underline font-normal underline-offset-[4px] inline-block"
                                     data-astro-prefetch
                                     href={`/tags/${tag}/`}
                                     title={`View posts with the tag: ${tag}`}
                                   >
                                       &#35;{tag}
-                                      <span class="inline-block bg-foreground text-background rounded-md px-1 min-w-4 text-center font-semibold text-xs">
+                                      <span class="inline-block bg-foreground text-background rounded-md px-1 py-0.5 min-w-4 text-center font-semibold text-xs">
                                               {val}
                                       </span>
                                   </a>

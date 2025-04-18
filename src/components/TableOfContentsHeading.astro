@@ -5,13 +5,13 @@ import type { Heading } from "./TableOfContents.astro";
 const { heading } = Astro.props;
 ---
 
-<li class="my-0.5">
-  <a href={"#" + heading.slug}  class="decoration-dotted! underline-offset-[6px] decoration-[2px] decoration-foreground hover:opacity-80 tracking-tight break-all">
+<li class="text-base">
+  <a href={"#" + heading.slug}  class="break-all font-normal no-underline">
     {heading.text}
   </a>
   {
     heading.subheadings.length > 0 && (
-      <ul class="my-1">
+      <ul class="">
         {heading.subheadings.map((subheading: Heading) => (
           <Astro.self heading={subheading} />
         ))}
@@ -19,3 +19,4 @@ const { heading } = Astro.props;
     )
   }
 </li>
+

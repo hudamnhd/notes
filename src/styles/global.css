@@ -61,9 +61,7 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		/* font-family: "Inter", sans-serif; */
-		font-optical-sizing: auto;
-		font-weight: 300 600;
+		font-family: "iA Writer Quattro", monospace;
 		@apply min-h-svh flex flex-col;
 		@apply antialiased text-foreground bg-background;
 		@apply px-4 py-10 max-w-4xl mx-auto sm:px-6 sm:py-12;
@@ -95,14 +93,13 @@
 		}
 	}
 	.content {
-		@apply prose prose-neutral prose prose-lg dark:prose-invert max-w-full;
-		@apply prose-headings:font-medium prose-headings:tracking-tight;
-		@apply prose-a:underline-offset-[4px] prose-a:break-all;
+		@apply prose prose-neutral prose-lg lg:prose-xl dark:prose-invert max-w-full;
+		@apply prose-headings:font-semibold prose-headings:tracking-tight;
+		@apply prose-a:underline-offset-[4px] prose-a:break-all prose-a:font-bold;
 		@apply prose-img:rounded-md;
-		@apply prose-p:tracking-tight;
 	}
 	.title {
-		@apply text-2xl font-medium tracking-tighter;
+		@apply text-2xl font-bold tracking-tight;
 	}
 }
 

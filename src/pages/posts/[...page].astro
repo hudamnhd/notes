@@ -111,7 +111,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 				<ul class="flex flex-wrap gap-2">
 					{uniqueTags.map((tag) => (
 						<li>
-							<a class="underline font-medium underline-offset-[4px] hover:decoration-2 inline-block flex items-center justify-center" href={`/tags/${tag}/`}>
+							<a class="underline font-bold underline-offset-[4px] hover:decoration-2 inline-block flex items-center justify-center" href={`/tags/${tag}/`}>
 								<span aria-hidden="true">#</span>
 								<span class="sr-only">View all posts with the tag</span>
 								{tag}

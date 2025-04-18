@@ -5,7 +5,7 @@ const { title, description } = Astro.props.frontmatter;
 ---
 
 <Base title={title} description={description}>
-  <div class="prose prose-neutral prose-base dark:prose-invert prose-headings:tracking-tight prose-headings:font-medium max-w-none" data-pagefind-ignore>
+  <div class="prose prose-neutral prose-base dark:prose-invert prose-headings:tracking-tight prose-headings:font-bold max-w-none" data-pagefind-ignore>
     <h1>{title}</h1>
     <hr />
     <slot />
