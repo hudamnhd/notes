@@ -41,6 +41,7 @@
 }
 
 @theme inline {
+	--font-sans: "Poppins";
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
 	--color-primary: var(--primary);
@@ -60,11 +61,12 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		font-family: "Inter", sans-serif;
-		font-weight: 400 600;
+		/* font-family: "Inter", sans-serif; */
+		/* font-weight: 400 600; */
+		font-family: "Lora", serif;
 		@apply min-h-svh flex flex-col;
 		@apply antialiased text-foreground bg-background;
-		@apply px-4 py-10 sm:px-6 sm:py-12 max-w-3xl sm:max-w-4xl mx-auto;
+		@apply px-4 py-10 max-w-3xl mx-auto;
 	}
 	html {
 		color-scheme: light dark;
@@ -76,7 +78,7 @@
 		color-scheme: light;
 		.astro-code,
 		.astro-code span {
-			background-color: var(--color-neutral-50) !important;
+			background-color: var(--color-gray-200) !important;
 		}
 	}
 	[data-theme="dark"] {
@@ -87,7 +89,7 @@
 		.astro-code,
 		.astro-code span {
 			color: var(--shiki-dark) !important;
-			background-color: var(--color-neutral-900) !important;
+			background-color: var(--color-gray-800) !important;
 			font-style: var(--shiki-dark-font-style) !important;
 			font-weight: var(--shiki-dark-font-weight) !important;
 			text-decoration: var(--shiki-dark-text-decoration) !important;
@@ -95,7 +97,7 @@
 	}
 	.content {
 		@apply prose prose-gray prose-quoteless prose-base lg:prose-lg xl:prose-xl dark:prose-invert max-w-none;
-		@apply prose-headings:font-medium prose-headings:tracking-tighter;
+		@apply prose-headings:font-medium;
 		@apply prose-a:break-all;
 		@apply prose-img:rounded-md;
 	}

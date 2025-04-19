@@ -1,14 +1,19 @@
 ---
-title: "Ceritaku ketika berada di Jakarta 2"
-description: "Ceritaku ketika berada di Jakarta lanjutan"
+title: "Kembali Ke Jakarta Ketika Covid"
+description: "Kembali Ke Jakarta Ketika Covid"
 publishDate: "Apr 11 2024"
 tags: ["story"]
 ---
+
+
+## Libur Idul Fitri Sudah Selesai
 
 Setelah 2 bulan dirumah akhirnya harus kembali ke Jakarta, karena masih Covid tentu sangat ribet
 beberapa persyaratan untuk naik kereta api. Aku akhirnya naik bus. Di masa masih beredarnya berita
 ada banyak pembatasan wilayah untuk orang dari luar kota, tentu aku juga khawatir jika nanti tidak
 sampai ke Jakarta. Tetapi semua itu tidak seperti yang aku pikirkan, aku selamat sampai Jakarta.
+
+### Kondisi Mulai Membaik
 
 Beberapa bulan kemudian kondisi sudah perlahan membaik, akhirnya beberapa kamar kos yang sebelumnya
 kosong mulai terisi. Kemudian salah satu teman kerjaku minta untuk ngekos bareng karena dia dapat
@@ -23,17 +28,24 @@ memutuskan pindah dari tempat ini karena menemukan yang lebih bagus. Alasan pert
 kosan ini ketika banjir airnya sampai ke paha tetapi untung kamarku di lantai atas. Aku berpamitan
 dengan ibu kos sekalian bayar sewa.
 
-Di tempat kos yang baru aku sangat suka karena rumahnya tepat di depannya yaitu Masjid. Bahkan di
+### Pindah Kos
+
+Di tempat kos yang baru aku sangat suka, karena rumahnya tepat di depannya yaitu Masjid. Bahkan di
 radius 200meter juga ada Masjid besar lagi. Aku sangat betah di tempat baru karena tempatnya luas
 dan nyaman. Aku mungkin tidak terlalu lama di tempat kos yang baru, karena masa kontrak ku sudah
 habis di kala itu usiaku sudah 23 tahun.
 
+## Masa Kontrak Sudah Habis
+
 Diusiaku yang sudah 23 tahun, aku mungkin banyak belajar di tempat kerja yang kedua ini.
-Aku melihat beberapa teman-temanku bisa kuliah di malam hari dan kerja disiang hari.
+Aku melihat beberapa teman-temanku bisa kuliah di malam hari dan kerja di siang hari.
 Aku mulai menyadari pentingnya kuliah bagi dunia kerja, aku ingin kuliah namun uangku pas-pasan.
 Aku memiliki banyak keahlian karena aku bekerja di bagian proyek. Aku mengerjakan pengelasan,
 penghitungan barang dll. Tetapi keahlianku tidak memiliki setifikat yang bisa mempetahankan
 keberadaanku.
+
+
+## Pulang Ke Kampung Halaman
 
 Setelah masa kerjaku habis, aku mengunjungi tetanggaku yang ada di Cibubur. Lalu aku di tawarin
 pekerjaan di Jakarta Selatan, tetapi aku tidak tau apa pekerjaannya. Karena waktu masih sekitar
@@ -47,8 +59,10 @@ ke-jakarta karena ingin kerja di rumah dekat orang tua. Sebenarnya alasannya tid
 , aku hanya tidak ingin merepotkan orang lain karena diriku. Tentu beliau memaklumi keputusanku
 karena beliau pun sebenarnya berasal dari Bojonegoro juga.
 
+## Akhir Cerita
+
 Itulah ceritaku ketika aku di Jakarta. Aku suka hidup di Jakarta karena fasilitas seperti busway,
-jaklingo, Ojek 24 jam, Restoran 24 jam dan aktivitas  di jalan yang hampir juga 24 jam. Aku juga
+jaklingo, ojek 24 jam, restoran 24 jam dan aktivitas  di jalan yang hampir juga 24 jam. Aku juga
 pernah mengunjungi Mall untuk sekedar beli baju 50rb-an, menonton bioskop XXI walau sekali, makan
 di restoran walau sekali dan ke ancol walaupun sekali juga.
 
@@ -56,7 +70,7 @@ Tentu tempat pertama kali yang di kunjungi ketika di Jakarta adalah Monas. Mungk
 hampir beberapa kali, tetapi aku sangat suka dengan Masjid Istiqlal. Aku tidak tau ketika berada di
 Masjid Istiqlal suasananya sejuk dan sangat menyenangkan. Aku pernah beberapa kali sepulang kerja
 pergi ke Masjid Istiqlal hanya untuk ikut sholat Maghrib dan Isya disana, karena aku tidak punya
-motor tentu aku naik GOJEK karena jaraknya lumayan jauh.
+motor tentu aku naik ojek online karena jaraknya lumayan jauh.
 
-Alhamdulilah Terima kasih Ya Allah Engkau pernah memberiku kesempatan untuk menginjakan kaki di
+Alhamdulilah Terima kasih Ya Allah, Engkau pernah memberiku kesempatan untuk merasakan hidup di
 Jakarta.
